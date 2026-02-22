@@ -1,55 +1,80 @@
-# GMC Gaming / GMC Optimizer - Site
+# gmc.dev.br
 
-Site institucional para apresentar o **GMC Optimizer** e hospedar Termos de Uso e Política de Privacidade (necessários para a Microsoft Store e para o próprio app).
+Site do desenvolvedor **Gabriel Correa** (gmc.dev.br). Home com apresentação e portfólio de projetos; cada aplicativo tem sua própria subpágina.
 
-## Estrutura
+**Domínio:** [gmc.dev.br](https://gmc.dev.br)
 
-- **index.html** – Página inicial com apresentação do produto, screenshots e link para a Store
-- **terms.html** – Termos de Uso
-- **privacy.html** – Política de Privacidade
-- **css/style.css** – Estilos (tema escuro, responsivo)
-- **images/** – Screenshots do app (screenshot-home.png, screenshot-configs.png)
+## Estrutura do site
 
-## Como usar localmente
+| URL | Conteúdo |
+|-----|----------|
+| **/** (index.html) | Home: apresentação “Desenvolvedor brasileiro” + lista de projetos |
+| **/gmcoptimizer/** | Página do GMC Optimizer: produto, screenshots, link para Microsoft Store |
+| **/gmcoptimizer/terms.html** | Termos de Uso do GMC Optimizer |
+| **/gmcoptimizer/privacy.html** | Política de Privacidade do GMC Optimizer |
 
-Abra `index.html` no navegador ou use um servidor local, por exemplo:
+## Estrutura de pastas
 
-```bash
-# Python
-python -m http.server 8000
-
-# Node (npx)
-npx serve .
+```
+/
+├── index.html          # Home (apresentação + projetos)
+├── css/
+│   └── style.css       # Estilos globais
+├── images/             # Imagens da home (opcional; hoje só GMC Optimizer tem imagens em gmcoptimizer/images)
+├── gmcoptimizer/
+│   ├── index.html      # Página do app
+│   ├── terms.html
+│   ├── privacy.html
+│   └── images/
+│       ├── screenshot-home.png
+│       └── screenshot-configs.png
+└── README.md
 ```
 
-Acesse `http://localhost:8000`.
+## Adicionar um novo projeto
 
-## Publicação
+1. Crie uma pasta em `/[nome-do-app]/` (ex.: `meuapp/`).
+2. Coloque aí `index.html` (e, se precisar, termos e privacidade).
+3. Na **home** (`index.html`), adicione um novo card no `.project-grid`:
 
-Publicar o conteúdo em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel, etc.) ou em um servidor web. Após publicar, anote a URL base do site (ex.: `https://seudominio.com`).
+```html
+<a href="meuapp/index.html" class="project-card">
+  <div class="project-card-inner">
+    <span class="project-card-label">Plataforma · Categoria</span>
+    <h3>Nome do App</h3>
+    <p>Descrição curta.</p>
+    <span class="project-card-cta">Ver projeto →</span>
+  </div>
+</a>
+```
 
-## URLs para o GMC Optimizer e Microsoft Store
+## URLs para o GMC Optimizer (app e Microsoft Store)
 
-Depois que o site estiver no ar, use estas URLs:
+Depois de publicar o site em **gmc.dev.br**, use:
 
-- **Termos de Uso:** `https://seudominio.com/terms.html`
-- **Política de Privacidade:** `https://seudominio.com/privacy.html`
+- **Termos de Uso:** `https://gmc.dev.br/gmcoptimizer/terms.html`
+- **Política de Privacidade:** `https://gmc.dev.br/gmcoptimizer/privacy.html`
 
-No projeto **GMC Optimizer**, atualize `lib/core/constants/app_constants.dart`:
+No projeto **GMC Optimizer** (Flutter), em `lib/core/constants/app_constants.dart`:
 
 ```dart
-static const String termsOfServiceUrl = 'https://seudominio.com/terms.html';
-static const String privacyPolicyUrl = 'https://seudominio.com/privacy.html';
+static const String termsOfServiceUrl = 'https://gmc.dev.br/gmcoptimizer/terms.html';
+static const String privacyPolicyUrl = 'https://gmc.dev.br/gmcoptimizer/privacy.html';
 ```
 
-No **Partner Center** (Microsoft Store), informe as mesmas URLs na página do app (Política de Privacidade e Termos de Uso, quando solicitado).
+No **Partner Center** (Microsoft Store), informe as mesmas URLs onde o app pede link de Termos e de Política de Privacidade.
 
-## Screenshots
+## Publicação no gmc.dev.br
 
-As imagens em `images/` são mockups de apresentação do app. Se quiser usar prints reais do GMC Optimizer, substitua:
+Envie o conteúdo da pasta do site para o host (FTP, painel de hospedagem ou deploy via Git, conforme o que o seu provedor oferecer). A raiz do domínio deve apontar para a pasta que contém `index.html`, `css/`, `gmcoptimizer/`, etc.
 
-- `images/screenshot-home.png` – Tela inicial (Otimize seu PC, categorias de otimização)
-- `images/screenshot-configs.png` – Tela Configs FPS (configurações para jogos)
+Para testar localmente com URLs relativas:
+
+```bash
+# Na pasta do site
+python -m http.server 8000
+# Acesse http://localhost:8000
+```
 
 ---
 
