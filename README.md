@@ -8,7 +8,7 @@ Site institucional para apresentar o **GMC Optimizer** e hospedar Termos de Uso 
 - **terms.html** – Termos de Uso
 - **privacy.html** – Política de Privacidade
 - **css/style.css** – Estilos (tema escuro, responsivo)
-- **images/** – Screenshots do app (screenshot-home.png, screenshot-optimizers.png)
+- **images/** – Screenshots do app (screenshot-home.png, screenshot-configs.png)
 
 ## Como usar localmente
 
@@ -48,8 +48,8 @@ No **Partner Center** (Microsoft Store), informe as mesmas URLs na página do ap
 
 As imagens em `images/` são mockups de apresentação do app. Se quiser usar prints reais do GMC Optimizer, substitua:
 
-- `images/screenshot-home.png` – Sugestão: tela inicial com o título e cards de otimizadores
-- `images/screenshot-optimizers.png` – Sugestão: tela com a lista/grid de otimizadores
+- `images/screenshot-home.png` – Tela inicial (Otimize seu PC, categorias de otimização)
+- `images/screenshot-configs.png` – Tela Configs FPS (configurações para jogos)
 
 ---
 
