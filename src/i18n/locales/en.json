@@ -68,30 +68,16 @@
   },
   "stats": {
     "label": "In numbers",
-    "heading": "The numbers that exist",
-    "intro": "No speed multiplier, no FPS percentage. The app does not measure those, so it does not promise them.",
+    "heading": "What comes ready",
+    "intro": "Nothing to configure before you start using it.",
     "items": [
       {
         "value": "100+",
-        "label": "ready-made optimizations to apply"
+        "label": "optimizations and presets ready to use"
       },
       {
-        "value": "72",
-        "label": "Windows tweaks, across 10 categories"
-      },
-      {
-        "value": "61",
-        "label": "of them verified straight from the registry"
-      },
-      {
-        "value": "1",
-        "unit": " s",
-        "label": "between live readings"
-      },
-      {
-        "value": "60",
-        "unit": " s",
-        "label": "of graph behind every reading"
+        "value": "4",
+        "label": "live health meters: processor, memory, disk and network"
       }
     ]
   },

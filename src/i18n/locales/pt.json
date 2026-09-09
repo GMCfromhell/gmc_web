@@ -68,30 +68,16 @@
   },
   "stats": {
     "label": "Em números",
-    "heading": "Os números que existem",
-    "intro": "Nenhum multiplicador de velocidade, nenhuma porcentagem de FPS. O app não mede isso, então não promete.",
+    "heading": "O que já vem pronto",
+    "intro": "Sem configurar nada antes de começar a usar.",
     "items": [
       {
         "value": "100+",
-        "label": "otimizações prontas para aplicar"
+        "label": "otimizações e predefinições prontas para uso"
       },
       {
-        "value": "72",
-        "label": "ajustes do Windows, em 10 categorias"
-      },
-      {
-        "value": "61",
-        "label": "deles conferidos direto no registro"
-      },
-      {
-        "value": "1",
-        "unit": " s",
-        "label": "de intervalo entre as leituras ao vivo"
-      },
-      {
-        "value": "60",
-        "unit": " s",
-        "label": "de gráfico para cada leitura"
+        "value": "4",
+        "label": "medidores de saúde ao vivo: processador, memória, disco e rede"
       }
     ]
   },
