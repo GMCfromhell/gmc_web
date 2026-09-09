@@ -1,0 +1,35 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const items: string[] = t('honesty.items');
+---
+
+<section class="section">
+  <div class="container">
+    <div class="honesty">
+      <p class="section-label">{t('honesty.label')}</p>
+      <h2 class="section-title">{t('honesty.heading')}</h2>
+      <p class="section-intro">{t('honesty.intro')}</p>
+
+      <ul class="honesty-grid">
+        {items.map((item) => (
+          <li class="honesty-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <p class="honesty-note" set:html={t('honesty.note')}></p>
+    </div>
+  </div>
+</section>

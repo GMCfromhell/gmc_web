@@ -1,0 +1,49 @@
+---
+import { useTranslations, defaultLang, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const prefix = lang === defaultLang ? '' : `/${lang}`;
+---
+
+<section class="section" id="projetos">
+  <div class="container">
+    <p class="section-label">{t('projects.label')}</p>
+    <h2 class="section-title">{t('projects.heading')}</h2>
+    <p class="section-intro">{t('projects.intro')}</p>
+
+    <div class="project-grid">
+      <a class="project-card" href={`${prefix}/gmcoptimizer`}>
+        <div class="project-card-head">
+          <img class="project-card-icon" src="/gmcoptimizer/icon.png" alt="" width="46" height="46" loading="lazy" decoding="async" />
+          <div>
+            <span class="project-card-label">{t('gmcoptimizer.label')}</span>
+            <h3>GMC Optimizer</h3>
+          </div>
+        </div>
+        <p>{t('gmcoptimizer.shortDesc')}</p>
+        <span class="project-card-cta">{t('projects.viewProject')}</span>
+      </a>
+
+      <div class="project-card project-card-soon">
+        <div class="project-card-head">
+          <span class="project-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <polyline points="12 7 12 12 15 14"></polyline>
+            </svg>
+          </span>
+          <div>
+            <span class="project-card-label">{t('projects.comingSoon')}</span>
+            <h3>{t('projects.comingSoonTitle')}</h3>
+          </div>
+        </div>
+        <p>{t('projects.comingSoonDesc')}</p>
+      </div>
+    </div>
+  </div>
+</section>

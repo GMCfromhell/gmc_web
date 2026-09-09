@@ -1,0 +1,57 @@
+---
+interface Image {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}
+
+interface Props {
+  title: string;
+  body: string;
+  items: string[];
+  image?: Image;
+  aside?: boolean;
+  reversed?: boolean;
+  first?: boolean;
+}
+
+const { title, body, items, image, aside = false, reversed = false, first = false } = Astro.props;
+const classes = [
+  'feature-section',
+  first ? 'is-first' : '',
+  reversed ? 'is-reversed' : '',
+  image || aside ? '' : 'is-solo',
+]
+  .filter(Boolean)
+  .join(' ');
+---
+
+<article class={classes}>
+  <div class="feature-copy">
+    <h3>{title}</h3>
+    <p set:html={body}></p>
+    <ul class="feature-list">
+      {items.map((item) => <li set:html={item}></li>)}
+    </ul>
+  </div>
+
+  {
+    image && (
+      <figure class="feature-shot">
+        <img
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>{image.caption}</figcaption>
+      </figure>
+    )
+  }
+
+  <slot />
+</article>

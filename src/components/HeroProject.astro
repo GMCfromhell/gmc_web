@@ -1,0 +1,59 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+import { product } from '../data/product';
+import { shots } from '../data/shots';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const badges: string[] = t('gmcoptimizer.badges');
+const shot = shots[lang].home;
+---
+
+<section class="product-hero">
+  <div class="container product-hero-inner">
+    <img
+      class="product-wordmark"
+      src="/gmcoptimizer/wordmark.png"
+      alt="GMC Optimizer"
+      width="1024"
+      height="318"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <h1 class="visually-hidden">GMC Optimizer</h1>
+
+    <p class="product-lede">{t('gmcoptimizer.lede')}</p>
+    <p class="product-sub">{t('gmcoptimizer.sub')}</p>
+
+    <div class="cta-row">
+      <a class="cta" href={product.storeUrl} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 3h8.6v8.6H3V3Zm10.4 0H22v8.6h-8.6V3ZM3 13.4h8.6V22H3v-8.6Zm10.4 0H22V22h-8.6v-8.6Z"></path>
+        </svg>
+        <span>{t('gmcoptimizer.cta')}</span>
+      </a>
+      <a class="cta-ghost" href="#recursos">{t('gmcoptimizer.ctaSecondary')}</a>
+    </div>
+
+    <ul class="badge-row">
+      {badges.map((badge, index) => <li class={index === 0 ? 'badge badge-version' : 'badge'}>{badge}</li>)}
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="hero-shot">
+      <img
+        src={shot.src}
+        alt={t('gmcoptimizer.captions.home')}
+        width={shot.width}
+        height={shot.height}
+        fetchpriority="high"
+        decoding="async"
+      />
+    </div>
+  </div>
+</section>

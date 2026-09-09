@@ -1,0 +1,22 @@
+---
+interface Stat {
+  value: string;
+  unit?: string;
+  label: string;
+}
+
+interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+
+<ul class="stat-strip">
+  {stats.map(({ value, unit, label }) => (
+    <li class="stat">
+      <span class="stat-value">{value}{unit && <small>{unit}</small>}</span>
+      <span class="stat-label">{label}</span>
+    </li>
+  ))}
+</ul>

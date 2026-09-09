@@ -1,0 +1,49 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  namespace: 'terms' | 'privacy';
+}
+
+const { lang, namespace } = Astro.props;
+const t = useTranslations(lang);
+const sections: any[] = t(`${namespace}.sections`);
+---
+
+<article class="legal">
+  <div class="container container-narrow">
+    <h1>{t(`${namespace}.heading`)}</h1>
+    <p class="legal-updated">{t(`${namespace}.updated`)}</p>
+
+    {
+      sections.map((section) => (
+        <section>
+          <h2>{section.title}</h2>
+
+          {section.paragraphs && section.paragraphs.map((text: string) => <p>{text}</p>)}
+
+          {section.callout && (
+            <div class="legal-callout">
+              <p>{section.callout}</p>
+            </div>
+          )}
+
+          {section.lists &&
+            section.lists.map((list: any) => (
+              <div>
+                {list.title && <h3>{list.title}</h3>}
+                <ul>
+                  {list.items.map((item: string) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+          {section.paragraphs2 && section.paragraphs2.map((text: string) => <p>{text}</p>)}
+        </section>
+      ))
+    }
+  </div>
+</article>

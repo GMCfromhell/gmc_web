@@ -1,0 +1,29 @@
+---
+const techs = [
+  { file: 'flutter', alt: 'Flutter' },
+  { file: 'dart', alt: 'Dart' },
+  { file: 'react', alt: 'React' },
+  { file: 'typescript', alt: 'TypeScript' },
+  { file: 'javascript', alt: 'JavaScript' },
+  { file: 'html5', alt: 'HTML' },
+  { file: 'css3', alt: 'CSS' },
+  { file: 'csharp', alt: 'C#' },
+  { file: 'java', alt: 'Java' },
+  { file: 'kotlin', alt: 'Kotlin' },
+  { file: 'php', alt: 'PHP' },
+  { file: 'python', alt: 'Python' },
+];
+---
+
+<div class="tech-marquee">
+  <div class="tech-track">
+    {techs.map(({ file, alt }) => (
+      <img src={`/tech/${file}.svg`} alt={alt} width="34" height="34" loading="lazy" decoding="async" />
+    ))}
+  </div>
+  <div class="tech-track" aria-hidden="true">
+    {techs.map(({ file }) => (
+      <img src={`/tech/${file}.svg`} alt="" width="34" height="34" loading="lazy" decoding="async" />
+    ))}
+  </div>
+</div>

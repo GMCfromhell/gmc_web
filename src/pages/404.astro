@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations, type Lang } from '../i18n/utils';
+
+const lang: Lang = 'pt';
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={t('notFound.pageTitle')}
+  description={t('notFound.body')}
+  lang={lang}
+  canonicalPath="/404.html"
+  noAlternates
+>
+  <div class="container not-found">
+    <p class="code">404</p>
+    <h1>{t('notFound.heading')}</h1>
+    <p>{t('notFound.body')}</p>
+    <a class="cta" href="/">{t('notFound.cta')}</a>
+  </div>
+</BaseLayout>

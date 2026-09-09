@@ -1,0 +1,428 @@
+{
+  "site": {
+    "title": "Gabriel Correa GMC",
+    "description": "Brazilian developer. Apps and tools for Windows, web and mobile, focused on performance and diagnostics."
+  },
+  "nav": {
+    "brand": "Gabriel Correa",
+    "label": "Main navigation",
+    "home": "Home",
+    "menu": "Open menu",
+    "theme": "Switch between light and dark",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "title": "Gabriel Correa GMC",
+    "tagline": "Brazilian developer. I build apps and tools for <strong>Windows</strong>, <strong>web</strong> and <strong>mobile</strong>, focused on performance, diagnostics and software that tells the truth about what it did."
+  },
+  "projects": {
+    "label": "Portfolio",
+    "heading": "Available projects",
+    "intro": "What is published and in use today.",
+    "viewProject": "View project",
+    "comingSoon": "Coming soon",
+    "comingSoonTitle": "New projects",
+    "comingSoonDesc": "Other apps and tools in development. Come back soon."
+  },
+  "gmcoptimizer": {
+    "label": "Windows · Microsoft Store",
+    "metaTitle": "GMC Optimizer for Windows",
+    "metaDescription": "GMC Optimizer applies Windows tweaks and checks the registry to see which ones are really active. 72 tweaks, 61 verified straight from the key. Free, on the Microsoft Store.",
+    "shortDesc": "Applies Windows tweaks and checks the registry to see which ones are really active. Every step says what happened, and you can revert.",
+    "lede": "Applies the tweak, then checks that it really took.",
+    "sub": "There are 72 Windows tweaks, and 61 of them are read straight from the key instead of being assumed to have worked. When it cannot check one, it writes \"Not checked\". It does not call it inactive, and it does not call it applied.",
+    "cta": "Get on Microsoft Store",
+    "ctaSecondary": "See what it does",
+    "badges": ["v1.10.0", "Free", "Windows 10 and 11 · 64-bit", "No data collected"],
+    "captions": {
+      "home": "GMC Optimizer Home screen: live processor, memory, disk and network readings, pending tweaks and the Health Analysis summary.",
+      "optimize": "Optimizations screen: six script routines and the FPS Configs, each with its own run button.",
+      "windows": "Windows settings screen: tweaks by category, each marked Active, Inactive or Not checked."
+    }
+  },
+  "angle": {
+    "label": "The difference",
+    "heading": "An optimizer that answers for what it did",
+    "intro": "The whole category promises results and goes quiet when asked for proof. This one would rather show state.",
+    "items": [
+      {
+        "title": "It checks the registry",
+        "body": "Verification is derived from the same .reg file the button uses to apply, so the two cannot drift apart. Where it cannot decide, it writes \"Not checked\"."
+      },
+      {
+        "title": "Every step has a state",
+        "body": "Applied, already set, failed or not run. When a step fails, the screen says which one and why. \"Completed\" is not automatic."
+      },
+      {
+        "title": "You can revert",
+        "body": "The app records what was there before each change and writes it back when you ask. And it tells you what it cannot undo, instead of pretending it did."
+      }
+    ]
+  },
+  "stats": {
+    "label": "In numbers",
+    "heading": "The numbers that exist",
+    "intro": "No speed multiplier, no FPS percentage. The app does not measure those, so it does not promise them.",
+    "items": [
+      { "value": "72", "label": "Windows tweaks, across 10 categories" },
+      { "value": "61", "label": "of them verified straight from the registry" },
+      { "value": "6", "label": "script optimizations, plus 3 FPS Configs" },
+      { "value": "1", "unit": " s", "label": "between live readings" },
+      { "value": "60", "unit": " s", "label": "of graph behind every reading" }
+    ]
+  },
+  "features": {
+    "label": "Features",
+    "heading": "What is inside",
+    "intro": "Six screens, and what each one solves.",
+    "home": {
+      "title": "Home: an instrument panel, not a list of shortcuts",
+      "body": "Processor, memory, disk and network refreshed every 1 second, with a graph of the last 60 seconds. The reading is native to Windows: it does not depend on the system language and leaves no background process behind.",
+      "items": [
+        "Machine identity strip: PC name, processor, graphics card with VRAM, Windows version and uptime",
+        "Storage panel with space in use and free, per volume",
+        "<b>Recommendations that name the culprit</b>: \"Chrome is using 64% of the processor across 12 processes\", with a shortcut to the list",
+        "The figure at the top says <b>\"X% of tweaks applied\"</b>, not \"your machine is X% optimized\". It is the share of tweaks, not a score for your PC"
+      ]
+    },
+    "optimize": {
+      "title": "Optimizations and FPS Configs",
+      "body": "Six script routines: operating system, network connection, mouse and keyboard, processor, graphics card and memory. Plus the three FPS Configs.",
+      "items": [
+        "FPS Configs: Win32 and IRQ priority, Max Prerendered Frames set to 1, and the Multimedia and Games profile",
+        "Every step shows its own state: <b>applied, already set, failed or not run</b>",
+        "Revert an optimization: the dialog says how many values and services will be restored",
+        "And it also says what it <b>cannot</b> undo: power plans, netsh network tweaks and cache flushes. For those, the way back is the restore point",
+        "Restore point verified: the app reads the system after requesting it and only claims success once it exists"
+      ]
+    },
+    "windows": {
+      "title": "Windows tweaks",
+      "body": "72 tweaks across privacy, appearance, system, Start menu, taskbar, File Explorer, gaming, multitasking, AI and update, grouped by category.",
+      "items": [
+        "Apply or revert them one at a time, each with what it does and why it exists",
+        "A state on every item: <b>Active</b>, <b>Inactive</b> or <b>Not checked</b>",
+        "61 of the 72 are read straight from the registry key, up from 13 in the previous version",
+        "Search and filters by privilege and by applied state"
+      ]
+    },
+    "health": {
+      "title": "Health Analysis",
+      "body": "The headline of version 1.10, on its own screen. A scan of what Windows already knows about itself, ending in a report of what is worth fixing.",
+      "items": [
+        "Reads the event log, application errors, services, component state, disks, devices and protection",
+        "Uses the <b>stability index</b> Windows itself keeps, the 14 day average you can also see in <code>perfmon /rel</code>",
+        "Keeps the last scan between sessions and shows its date: a three-day-old reading does not present itself as current",
+        "Has a <b>\"what was not verified\"</b> section, with the option to retake only the readings that were missing"
+      ],
+      "caption": "What the scan reads",
+      "sources": ["Event log", "Application errors", "Services", "Component state", "Disks and devices", "Stability index"],
+      "score": "3.3 of 10",
+      "result": "The stability index comes from Windows itself, with the scan date in plain sight. The report lists what is worth fixing and what could not be read."
+    },
+    "tools": {
+      "title": "Tools",
+      "body": "What normally takes five different Windows windows, with readable output.",
+      "items": [
+        "System file verification with <b>SFC and DISM</b>, each tool reporting its own result",
+        "Disk health with wear level, telling SSD apart from mechanical disk",
+        "Processor, graphics card and disk temperature, on demand",
+        "Diagnostics from the event log, startup programs, registry analysis and Wi-Fi diagnostics"
+      ]
+    },
+    "history": {
+      "title": "History",
+      "body": "What changed, when it changed, and how to go back.",
+      "items": [
+        "Every entry marked as applied or reverted",
+        "Undo one change or all of them at once",
+        "The ones with no way back are marked as such, instead of offering a button that does nothing"
+      ]
+    }
+  },
+  "honesty": {
+    "label": "Scope",
+    "heading": "What it does not do",
+    "intro": "This is here because knowing the limit before installing is more useful than finding it afterwards.",
+    "items": [
+      "It does not clear temporary files",
+      "It does not defragment disks",
+      "It does not remove viruses",
+      "It does not speed up your internet",
+      "It promises no FPS percentage and no speed multiplier",
+      "It installs no service and does not stay resident",
+      "It collects no data",
+      "It has no paid tier and no in-app purchases"
+    ],
+    "note": "Three releases were spent taking the lying out of the interface: the \"completed\" that was always there, the restore point that claimed success without creating anything, the percentage that sold itself as a score for your machine. <b>Putting all of it back on a website would be a strange move.</b>"
+  },
+  "permission": {
+    "label": "Permission and privacy",
+    "heading": "It opens without asking for Administrator",
+    "intro": "Permission is requested per action, by Windows itself, and only when the action needs it.",
+    "items": [
+      {
+        "title": "Elevation per action",
+        "body": "When an action needs Administrator, Windows asks at that moment. Nothing runs elevated the whole time."
+      },
+      {
+        "title": "You know before you click",
+        "body": "The item already carries the Admin badge before the click, so there is no unexpected prompt."
+      },
+      {
+        "title": "Nothing leaves the machine",
+        "body": "No service installed, no resident process, no telemetry and no personal data collected."
+      }
+    ],
+    "adminBadge": "Admin"
+  },
+  "release": {
+    "label": "What is new",
+    "heading": "What changed in the latest version",
+    "intro": "1.10 rolls up everything done since 1.7, the last version published before it.",
+    "items": [
+      "<b>New Health Analysis</b>: a full scan of Windows events, errors, services and components, ending in a report of what is worth fixing, on its own screen.",
+      "<b>Home is now two columns</b>: pending tweaks on one side, the health summary on the other.",
+      "Recommendations name the culprit, with a shortcut to the process list.",
+      "Optimizations show every step with its own state: applied, already set, failed or not run.",
+      "<b>\"Completed\" is no longer automatic.</b> When a step fails, the screen says which one and why; when nothing changed, it says that too.",
+      "<b>New: revert an optimization.</b> The app records what was there before each change and writes it back, and tells you what it cannot undo.",
+      "Restore point: the app checks it was really created instead of always announcing success.",
+      "Gone: steps that wrote a Windows default and celebrated, and claims about freeing memory that freed none.",
+      "Windows tweaks: 61 of 72 are now verified straight from the registry, up from 13.",
+      "SFC and DISM output is readable and correctly accented. The DISM result used to be discarded; each tool now reports its own.",
+      "Fixed: the Mouse and Keyboard optimization did not run at all, and the app could crash on close."
+    ]
+  },
+  "requirements": {
+    "label": "Requirements",
+    "heading": "What you need to run it",
+    "items": [
+      { "term": "System", "value": "Windows 10 version 17763 or later" },
+      { "term": "Architecture", "value": "64-bit" },
+      { "term": "Languages", "value": "English and Portuguese" },
+      { "term": "Price", "value": "Free" }
+    ],
+    "note": "Distributed through the Microsoft Store as a signed package. There is no direct download: a copy taken outside the Store is not recognised as a legitimate install and will not open."
+  },
+  "closing": {
+    "heading": "Install it from the Microsoft Store",
+    "body": "Free, no ads and no in-app purchases. Installation and updates go through the Store."
+  },
+  "footer": {
+    "rights": "© 2026 Gabriel Correa GMC. All rights reserved.",
+    "legalLabel": "Legal links"
+  },
+  "notFound": {
+    "pageTitle": "Page not found",
+    "heading": "This page does not exist",
+    "body": "The address you opened does not exist or has been moved.",
+    "cta": "Back to home"
+  },
+  "terms": {
+    "pageTitle": "GMC Optimizer Terms of Use",
+    "metaDescription": "Terms of Use for GMC Optimizer, a free Windows app distributed through the Microsoft Store.",
+    "heading": "Terms of Use",
+    "updated": "Last updated: 9 September 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance of these Terms",
+        "paragraphs": [
+          "By installing or using GMC Optimizer (\"the App\"), you agree to these Terms of Use. If you do not agree with any part of them, do not use the App.",
+          "The App presents these Terms on first launch and asks for acceptance before unlocking its features."
+        ]
+      },
+      {
+        "title": "2. What the App is",
+        "paragraphs": [
+          "GMC Optimizer is a free Windows utility that applies system configuration tweaks, runs optimization routines, and presents readings and diagnostics that Windows itself provides."
+        ],
+        "lists": [
+          {
+            "title": "It does",
+            "items": [
+              "Apply and revert 72 Windows registry tweaks, grouped by category",
+              "Run six script optimization routines: operating system, network connection, mouse and keyboard, processor, graphics card and memory",
+              "Apply three registry settings aimed at input latency in games, called FPS Configs",
+              "Show processor, memory, disk and network readings, read through native Windows APIs",
+              "Run the Health Analysis, which reads the event log, services, component state and the Windows stability index",
+              "Bundle diagnostic tools: SFC, DISM, disk health, temperature, startup programs, registry analysis and Wi-Fi diagnostics"
+            ]
+          },
+          {
+            "title": "It does not",
+            "items": [
+              "It does not clear temporary files and does not defragment disks",
+              "It does not remove viruses and is not a replacement for antivirus software",
+              "It does not speed up your internet connection",
+              "It promises no FPS percentage and no performance multiplier, because it does not measure those",
+              "It installs no service, does not keep running in the background and collects no data"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3. Requirements and permissions",
+        "paragraphs": [
+          "The App requires Windows 10 version 17763 (1809) or later, 64-bit, and is distributed exclusively through the Microsoft Store as a signed package.",
+          "The App does not run as Administrator at launch. When a specific action needs elevation, Windows itself asks for confirmation at that moment, and the corresponding item carries the Admin badge before it is triggered."
+        ]
+      },
+      {
+        "title": "4. Risks and your responsibility",
+        "paragraphs": [
+          "The App changes operating system settings. Some changes only take effect after a restart, and configuration changes can affect the behaviour of Windows and of installed programs."
+        ],
+        "callout": "Before applying optimizations, we recommend creating a Windows restore point. The App offers to create one and verifies that it was actually created before reporting success. Not every change is reversible by the App: power plans, network tweaks applied through netsh and cache flushes are not undone by it, and for those cases the restore point is the way back.",
+        "lists": [
+          {
+            "title": "You agree to",
+            "items": [
+              "Use the App only for legitimate purposes and on machines under your responsibility",
+              "Read the description of each tweak before applying it",
+              "Create a restore point before applying optimizations",
+              "Not modify, redistribute or reverse engineer the App without authorisation"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "5. Disclaimer of warranties",
+        "paragraphs": [
+          "The App is provided \"AS IS\", without warranties of any kind, express or implied, including warranties of fitness for a particular purpose, uninterrupted operation or freedom from errors.",
+          "You use the App at your own risk."
+        ]
+      },
+      {
+        "title": "6. Limitation of liability",
+        "paragraphs": [
+          "To the maximum extent permitted by applicable law, the developer is not liable for direct, indirect, incidental or consequential damages arising from the use of, or inability to use, the App, including data loss, loss of performance or the need to reinstall the operating system."
+        ]
+      },
+      {
+        "title": "7. Intellectual property",
+        "paragraphs": [
+          "The App, its code, its interface, its brand and its materials are owned by Gabriel Correa GMC and protected by copyright law. No intellectual property rights are transferred by using the App."
+        ]
+      },
+      {
+        "title": "8. Updates and availability",
+        "paragraphs": [
+          "Updates are distributed through the Microsoft Store. The developer may change, suspend or discontinue the App, in whole or in part, at any time.",
+          "These Terms may be revised. The date at the top of this page indicates the last revision, and continued use of the App after a revision means acceptance of the version in force."
+        ]
+      },
+      {
+        "title": "9. Governing law",
+        "paragraphs": [
+          "These Terms are governed by the laws of the Federative Republic of Brazil, and the competent forum is that of the user's domicile where consumer legislation applies."
+        ]
+      },
+      {
+        "title": "10. Contact",
+        "paragraphs": [
+          "Questions about these Terms can be sent through the GMC Optimizer page on the Microsoft Store, the official contact channel for the App."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "pageTitle": "GMC Optimizer Privacy Policy",
+    "metaDescription": "Privacy Policy for GMC Optimizer. The app collects no personal data and runs everything locally on your machine.",
+    "heading": "Privacy Policy",
+    "updated": "Last updated: 9 September 2026",
+    "sections": [
+      {
+        "title": "1. Summary",
+        "callout": "GMC Optimizer collects no data. It sends no information to the developer's servers, installs no service, does not keep running in the background, and has no telemetry or analytics.",
+        "paragraphs": [
+          "This Policy describes how GMC Optimizer (\"the App\") handles information. It covers the App distributed through the Microsoft Store and this website."
+        ]
+      },
+      {
+        "title": "2. Information the App does not collect",
+        "lists": [
+          {
+            "items": [
+              "Name, email, address or any data that identifies you",
+              "The contents of personal files",
+              "Web browsing history or data",
+              "Geographic location",
+              "Data from other installed applications",
+              "Usage statistics, which features were run or how often",
+              "Automatic crash reports sent to the developer"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3. Local processing",
+        "paragraphs": [
+          "All system readings, registry tweaks, optimization routines and diagnostics run locally, on your machine.",
+          "Live processor, memory, disk and network readings use native Windows APIs. Optimization routines run through PowerShell scripts shipped inside the App package. Registry tweaks are applied from .reg files that also ship inside the package.",
+          "Scan results, the change history and your language and theme preferences are stored only in the App's local storage, on your computer, and can be cleared by you from within the App or by removing the App."
+        ]
+      },
+      {
+        "title": "4. Internet access",
+        "paragraphs": [
+          "The App declares internet access capability in its package for the following reasons, and only for these:"
+        ],
+        "lists": [
+          {
+            "items": [
+              "Opening the App's Microsoft Store page in your browser when you use the check for updates option",
+              "Opening these Terms and this Policy in your browser",
+              "Connectivity tests in the Wi-Fi diagnostics tool, when you run it, which check whether the gateway and the internet are reachable"
+            ]
+          }
+        ],
+        "paragraphs2": [
+          "None of these operations send data about you or about your machine to the developer."
+        ]
+      },
+      {
+        "title": "5. Microsoft Store",
+        "paragraphs": [
+          "Installation, licence verification and updates are handled by the Microsoft Store. Microsoft collects and processes its own acquisition and usage data under the Microsoft Privacy Statement, which is independent of this Policy.",
+          "In Microsoft's publishing dashboard, the developer has access only to aggregated, anonymous reports, such as the number of page views and installs. Those reports do not identify individual users."
+        ]
+      },
+      {
+        "title": "6. This website",
+        "paragraphs": [
+          "This website is static and uses no cookies, analytics, tracking pixels or forms. No resource is loaded from third-party servers: fonts, icons and images are served by the site itself.",
+          "The site is hosted on GitHub Pages, which may log technical access data such as IP addresses, under GitHub's own privacy policy."
+        ]
+      },
+      {
+        "title": "7. Children",
+        "paragraphs": [
+          "The App is a technical system configuration tool, is not directed at children under 13, and does not knowingly collect data from children."
+        ]
+      },
+      {
+        "title": "8. Your rights",
+        "paragraphs": [
+          "Because the App neither collects nor stores personal data on servers, there is no personal data under the developer's control to be accessed, corrected, ported or deleted.",
+          "Data written locally by the App stays under your control and can be removed by you at any time.",
+          "This Policy is written in line with the Brazilian General Data Protection Law (Law 13.709/2018) and the European Union General Data Protection Regulation (GDPR)."
+        ]
+      },
+      {
+        "title": "9. Changes to this Policy",
+        "paragraphs": [
+          "This Policy may be revised when the App's behaviour changes. The date at the top of this page indicates the last revision. Relevant changes will also be reflected in the release notes published on the Microsoft Store."
+        ]
+      },
+      {
+        "title": "10. Contact",
+        "paragraphs": [
+          "Questions about this Policy can be sent through the GMC Optimizer page on the Microsoft Store, the official contact channel for the App."
+        ]
+      }
+    ]
+  }
+}

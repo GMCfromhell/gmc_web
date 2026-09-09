@@ -1,0 +1,90 @@
+---
+import LanguagePicker from './LanguagePicker.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { useTranslations, defaultLang, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  canonicalPath: string;
+}
+
+const { lang, canonicalPath } = Astro.props;
+const t = useTranslations(lang);
+const prefix = lang === defaultLang ? '' : `/${lang}`;
+const homePath = prefix === '' ? '/' : prefix;
+const productPath = `${prefix}/gmcoptimizer`;
+const isProduct = canonicalPath.startsWith('/gmcoptimizer');
+---
+
+<a class="skip-link" href="#content">{t('nav.skipToContent')}</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href={homePath} class="brand">
+      <span class="brand-mark" aria-hidden="true">GMC</span>
+      <span>{t('nav.brand')}</span>
+    </a>
+
+    <div class="header-spacer"></div>
+
+    <nav class="nav" id="site-nav" aria-label={t('nav.label')}>
+      <a href={homePath} aria-current={!isProduct ? 'page' : undefined}>{t('nav.home')}</a>
+      <a href={productPath} aria-current={isProduct ? 'page' : undefined}>GMC Optimizer</a>
+    </nav>
+
+    <div class="header-actions">
+      <ThemeToggle lang={lang} />
+      <LanguagePicker lang={lang} canonicalPath={canonicalPath} />
+      <button
+        type="button"
+        class="icon-button nav-toggle"
+        id="nav-toggle"
+        aria-label={t('nav.menu')}
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    var mobile = window.matchMedia('(max-width: 768px)');
+
+    function sync() {
+      if (mobile.matches) {
+        nav.hidden = toggle.getAttribute('aria-expanded') !== 'true';
+      } else {
+        nav.hidden = false;
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    toggle.addEventListener('click', function () {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      sync();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        toggle.setAttribute('aria-expanded', 'false');
+        sync();
+        toggle.focus();
+      }
+    });
+
+    mobile.addEventListener('change', sync);
+    sync();
+  })();
+</script>
