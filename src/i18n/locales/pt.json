@@ -92,7 +92,7 @@
         "Faixa de identidade da máquina: nome do PC, processador, placa gráfica com VRAM, versão do Windows e tempo ligado",
         "Painel de armazenamento com espaço em uso e livre por volume",
         "<b>Recomendações que nomeiam o responsável</b>: \"Chrome está usando 64% do processador, somando 12 processos\", com atalho para a lista",
-        "O percentual do topo diz <b>\"X% dos ajustes aplicados\"</b>, não \"sua máquina está X% otimizada\". É a proporção dos ajustes, não uma nota da máquina"
+        "O percentual do topo mostra a proporção de ajustes aplicados, com o total ao lado"
       ]
     },
     "optimize": {
@@ -112,7 +112,7 @@
       "items": [
         "Aplicar ou reverter um por um, com a explicação do que faz e por que existe",
         "Estado em cada item: <b>Ativo</b>, <b>Inativo</b> ou <b>Não verificado</b>",
-        "61 dos 72 são lidos direto na chave do registro, contra 13 na versão anterior",
+        "61 dos 72 são lidos direto na chave do registro",
         "Busca e filtros por privilégio e por estado aplicado"
       ]
     },
@@ -122,7 +122,7 @@
       "items": [
         "Lê registro de eventos, erros de aplicativo, serviços, estado dos componentes, discos, dispositivos e proteção",
         "Usa o <b>índice de estabilidade</b> que o próprio Windows mantém, a média de 14 dias que você também vê em <code>perfmon /rel</code>",
-        "Guarda a última varredura entre sessões e mostra a data: um dado de três dias atrás não se apresenta como de agora",
+        "Guarda a última varredura entre sessões e mostra a data em que ela foi feita",
         "Tem uma seção <b>\"o que não foi verificado\"</b>, com a opção de refazer só as leituras que faltaram"
       ],
       "caption": "O que a varredura lê",
@@ -153,7 +153,7 @@
       "items": [
         "Cada entrada marcada como aplicada ou revertida",
         "Desfazer uma alteração ou todas de uma vez",
-        "As que não têm volta aparecem marcadas assim, em vez de oferecer um botão que não funciona"
+        "As alterações sem volta aparecem marcadas como tal"
       ]
     }
   },
@@ -171,7 +171,7 @@
       "Não coleta dado nenhum",
       "Não tem versão paga nem compra dentro do app"
     ],
-    "note": "As três versões anteriores foram gastas tirando mentira da interface: o \"concluído\" que era sempre, o ponto de restauração que dizia ter criado sem criar, a porcentagem que se vendia como nota da máquina. <b>Seria estranho recolocar tudo isso no site.</b>"
+    "note": "A lista está aqui para você saber o que esperar antes de instalar. O GMC Optimizer cuida de configuração do Windows, leitura do sistema e diagnóstico."
   },
   "permission": {
     "label": "Permissão e privacidade",
@@ -198,17 +198,16 @@
     "heading": "O que mudou na versão mais recente",
     "intro": "A 1.10 junta o que foi feito desde a 1.7, a última publicada antes dela.",
     "items": [
-      "<b>Nova Análise de Saúde</b>: uma varredura de eventos, erros, serviços e componentes do Windows, com relatório do que vale corrigir, em tela própria.",
+      "<b>Nova Análise de Saúde</b>: varredura de eventos, erros, serviços e componentes do Windows, com relatório do que vale corrigir, em tela própria.",
       "<b>Início em duas colunas</b>: ajustes pendentes de um lado, o resumo da saúde do outro.",
-      "Recomendações dizem quem é o responsável, com atalho para a lista de processos.",
-      "Otimizações mostram cada passo com o seu estado: aplicado, já estava assim, falhou ou não executado.",
-      "<b>\"Concluído\" deixou de ser automático.</b> Se um passo falha, a tela diz qual e por quê; se nada mudou, ela diz isso também.",
-      "<b>Novo: reverter uma otimização.</b> O app anota o que havia antes de cada alteração e grava de volta, dizendo o que não consegue desfazer.",
-      "Ponto de restauração: o app confere se ele foi mesmo criado, em vez de anunciar sucesso sempre.",
-      "Saíram passos que gravavam o padrão do Windows e comemoravam, e promessas de liberar memória que não liberavam nada.",
-      "Ajustes do Windows: 61 dos 72 agora são conferidos direto no registro, contra 13 antes.",
-      "A saída do SFC e do DISM aparece legível e acentuada. O resultado do DISM era descartado; agora cada ferramenta responde pelo seu.",
-      "Corrigido: a otimização de Mouse e Teclado não rodava, e o app podia quebrar ao fechar."
+      "Recomendações que nomeiam o processo responsável, com atalho para a lista.",
+      "Cada passo de uma otimização aparece com o seu estado: aplicado, já estava assim, falhou ou não executado.",
+      "<b>Novo: reverter uma otimização.</b> O app anota o que havia antes de cada alteração e grava de volta, e informa o que não é possível desfazer.",
+      "Ponto de restauração conferido no sistema depois de criado.",
+      "Ajustes do Windows: 61 dos 72 conferidos direto no registro.",
+      "Saída do SFC e do DISM legível e acentuada, com cada ferramenta respondendo pelo seu resultado.",
+      "O app distingue SSD de disco mecânico e ajusta o que recomenda.",
+      "Otimizações, Configs FPS e Registro também em inglês."
     ]
   },
   "requirements": {

@@ -92,7 +92,7 @@
         "Machine identity strip: PC name, processor, graphics card with VRAM, Windows version and uptime",
         "Storage panel with space in use and free, per volume",
         "<b>Recommendations that name the culprit</b>: \"Chrome is using 64% of the processor across 12 processes\", with a shortcut to the list",
-        "The figure at the top says <b>\"X% of tweaks applied\"</b>, not \"your machine is X% optimized\". It is the share of tweaks, not a score for your PC"
+        "The figure at the top shows the share of tweaks applied, with the total beside it"
       ]
     },
     "optimize": {
@@ -112,7 +112,7 @@
       "items": [
         "Apply or revert them one at a time, each with what it does and why it exists",
         "A state on every item: <b>Active</b>, <b>Inactive</b> or <b>Not checked</b>",
-        "61 of the 72 are read straight from the registry key, up from 13 in the previous version",
+        "61 of the 72 are read straight from the registry key",
         "Search and filters by privilege and by applied state"
       ]
     },
@@ -122,7 +122,7 @@
       "items": [
         "Reads the event log, application errors, services, component state, disks, devices and protection",
         "Uses the <b>stability index</b> Windows itself keeps, the 14 day average you can also see in <code>perfmon /rel</code>",
-        "Keeps the last scan between sessions and shows its date: a three-day-old reading does not present itself as current",
+        "Keeps the last scan between sessions and shows the date it was taken",
         "Has a <b>\"what was not verified\"</b> section, with the option to retake only the readings that were missing"
       ],
       "caption": "What the scan reads",
@@ -153,7 +153,7 @@
       "items": [
         "Every entry marked as applied or reverted",
         "Undo one change or all of them at once",
-        "The ones with no way back are marked as such, instead of offering a button that does nothing"
+        "Changes with no way back are marked as such"
       ]
     }
   },
@@ -171,7 +171,7 @@
       "It collects no data",
       "It has no paid tier and no in-app purchases"
     ],
-    "note": "Three releases were spent taking the lying out of the interface: the \"completed\" that was always there, the restore point that claimed success without creating anything, the percentage that sold itself as a score for your machine. <b>Putting all of it back on a website would be a strange move.</b>"
+    "note": "The list is here so you know what to expect before installing. GMC Optimizer covers Windows configuration, system readings and diagnostics."
   },
   "permission": {
     "label": "Permission and privacy",
@@ -198,17 +198,16 @@
     "heading": "What changed in the latest version",
     "intro": "1.10 rolls up everything done since 1.7, the last version published before it.",
     "items": [
-      "<b>New Health Analysis</b>: a full scan of Windows events, errors, services and components, ending in a report of what is worth fixing, on its own screen.",
+      "<b>New Health Analysis</b>: a scan of Windows events, errors, services and components, with a report of what is worth fixing, on its own screen.",
       "<b>Home is now two columns</b>: pending tweaks on one side, the health summary on the other.",
-      "Recommendations name the culprit, with a shortcut to the process list.",
-      "Optimizations show every step with its own state: applied, already set, failed or not run.",
-      "<b>\"Completed\" is no longer automatic.</b> When a step fails, the screen says which one and why; when nothing changed, it says that too.",
-      "<b>New: revert an optimization.</b> The app records what was there before each change and writes it back, and tells you what it cannot undo.",
-      "Restore point: the app checks it was really created instead of always announcing success.",
-      "Gone: steps that wrote a Windows default and celebrated, and claims about freeing memory that freed none.",
-      "Windows tweaks: 61 of 72 are now verified straight from the registry, up from 13.",
-      "SFC and DISM output is readable and correctly accented. The DISM result used to be discarded; each tool now reports its own.",
-      "Fixed: the Mouse and Keyboard optimization did not run at all, and the app could crash on close."
+      "Recommendations name the process responsible, with a shortcut to the list.",
+      "Every step of an optimization shows its own state: applied, already set, failed or not run.",
+      "<b>New: revert an optimization.</b> The app records what was there before each change and writes it back, and tells you what cannot be undone.",
+      "Restore point verified on the system after it is created.",
+      "Windows tweaks: 61 of the 72 verified straight from the registry.",
+      "SFC and DISM output is readable and correctly accented, with each tool reporting its own result.",
+      "The app tells SSD from mechanical disk and adjusts what it recommends.",
+      "Optimizations, FPS Configs and Registry are now in English too."
     ]
   },
   "requirements": {
