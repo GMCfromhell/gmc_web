@@ -49,20 +49,20 @@
   },
   "angle": {
     "label": "O diferencial",
-    "heading": "Um otimizador que responde pelo que fez",
-    "intro": "A categoria inteira promete resultado e some na hora de mostrar prova. Este aqui prefere mostrar estado.",
+    "heading": "Gratuito, simples e feito só para Windows",
+    "intro": "Sem plano, sem assinatura e sem recurso bloqueado. Tudo o que o app faz está disponível desde a instalação.",
     "items": [
       {
-        "title": "Confere no registro",
-        "body": "A verificação é derivada do mesmo arquivo .reg que o botão usa para aplicar, então os dois não podem divergir. Onde ele não consegue decidir, escreve \"Não verificado\"."
+        "title": "Gratuito, sem planos",
+        "body": "Não tem assinatura, não tem compra dentro do app, não tem versão paga e não tem anúncio. Você instala pela Microsoft Store e usa tudo."
       },
       {
-        "title": "Cada passo tem estado",
-        "body": "Aplicado, já estava assim, falhou ou não executado. Quando um passo falha, a tela diz qual e por quê. \"Concluído\" não é automático."
+        "title": "Simples e objetivo",
+        "body": "Cada otimização tem um botão para aplicar e outro para reverter, com uma linha explicando o que ela faz. Sem assistente de várias etapas e sem configuração antes de começar."
       },
       {
-        "title": "Dá para reverter",
-        "body": "O app anota o que havia antes de cada alteração e grava de volta quando você pede. E diz o que ele não consegue desfazer, em vez de fingir que desfez."
+        "title": "Feito só para Windows",
+        "body": "Windows 10 e 11, 64 bits. As leituras usam a API nativa do sistema e os ajustes vão direto no registro, sem processo em segundo plano."
       }
     ]
   },

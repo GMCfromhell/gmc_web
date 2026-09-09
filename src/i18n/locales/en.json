@@ -49,20 +49,20 @@
   },
   "angle": {
     "label": "The difference",
-    "heading": "An optimizer that answers for what it did",
-    "intro": "The whole category promises results and goes quiet when asked for proof. This one would rather show state.",
+    "heading": "Free, simple, and built only for Windows",
+    "intro": "No plan, no subscription and no locked feature. Everything the app does is there from the moment you install it.",
     "items": [
       {
-        "title": "It checks the registry",
-        "body": "Verification is derived from the same .reg file the button uses to apply, so the two cannot drift apart. Where it cannot decide, it writes \"Not checked\"."
+        "title": "Free, with no plans",
+        "body": "No subscription, no in-app purchase, no paid tier and no ads. You install it from the Microsoft Store and use all of it."
       },
       {
-        "title": "Every step has a state",
-        "body": "Applied, already set, failed or not run. When a step fails, the screen says which one and why. \"Completed\" is not automatic."
+        "title": "Simple and direct",
+        "body": "Every optimization has one button to apply and one to revert, with a line explaining what it does. No multi-step wizard and no setup before you start."
       },
       {
-        "title": "You can revert",
-        "body": "The app records what was there before each change and writes it back when you ask. And it tells you what it cannot undo, instead of pretending it did."
+        "title": "Built only for Windows",
+        "body": "Windows 10 and 11, 64-bit. Readings use the native system APIs and tweaks go straight to the registry, with no background process."
       }
     ]
   },
