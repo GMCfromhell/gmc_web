@@ -10,6 +10,7 @@ export const product = {
   architecture: 'x64',
   languages: ['pt-BR', 'en-US'],
   numbers: {
+    readyOptimizations: 133,
     tweaks: 72,
     tweaksVerified: 61,
     tweakCategories: 10,

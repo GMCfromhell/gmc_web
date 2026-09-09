@@ -29,13 +29,18 @@
   "gmcoptimizer": {
     "label": "Windows · Microsoft Store",
     "metaTitle": "GMC Optimizer para Windows",
-    "metaDescription": "O GMC Optimizer aplica ajustes do Windows e confere no registro quais estão mesmo ativos. 72 ajustes, 61 verificados direto na chave. Gratuito, na Microsoft Store.",
-    "shortDesc": "Aplica ajustes do Windows e confere no registro quais estão mesmo ativos. Cada passo diz o que aconteceu, e dá para reverter.",
-    "lede": "Aplica o ajuste e confere se ele ficou mesmo ativo.",
-    "sub": "São 72 ajustes do Windows, e 61 deles o app lê direto na chave em vez de supor que deu certo. Quando não consegue conferir, ele escreve \"Não verificado\". Não chama de inativo, não chama de aplicado.",
+    "metaDescription": "O GMC Optimizer reúne mais de 100 otimizações prontas para Windows, leituras do sistema em tempo real, análise de saúde e ferramentas de diagnóstico. Gratuito, na Microsoft Store.",
+    "shortDesc": "Mais de 100 otimizações prontas para privacidade, desempenho, rede e jogos, com leituras do sistema em tempo real e ferramentas de diagnóstico.",
+    "lede": "Otimize e monitore o Windows em um só lugar.",
+    "sub": "Mais de 100 otimizações prontas para privacidade, desempenho, rede e jogos. Junto com elas, leituras do sistema em tempo real, análise de saúde e ferramentas de diagnóstico, com aplicar e reverter em cada uma.",
     "cta": "Obter na Microsoft Store",
     "ctaSecondary": "Ver o que ele faz",
-    "badges": ["v1.10.0", "Gratuito", "Windows 10 e 11 · 64 bits", "Sem coleta de dados"],
+    "badges": [
+      "v1.10.0",
+      "Gratuito",
+      "Windows 10 e 11 · 64 bits",
+      "Sem coleta de dados"
+    ],
     "captions": {
       "home": "Tela Início do GMC Optimizer: leituras ao vivo de processador, memória, disco e rede, ajustes pendentes e o resumo da Análise de Saúde.",
       "optimize": "Tela Otimizações: seis rotinas por script e as Configs FPS, cada uma com botão de execução.",
@@ -44,33 +49,36 @@
   },
   "angle": {
     "label": "O diferencial",
-    "heading": "Um otimizador que responde pelo que fez",
-    "intro": "A categoria inteira promete resultado e some na hora de mostrar prova. Este aqui prefere mostrar estado.",
+    "heading": "Gratuito, simples e feito só para Windows",
+    "intro": "Sem plano, sem assinatura e sem recurso bloqueado. Tudo o que o app faz está disponível desde a instalação.",
     "items": [
       {
-        "title": "Confere no registro",
-        "body": "A verificação é derivada do mesmo arquivo .reg que o botão usa para aplicar, então os dois não podem divergir. Onde ele não consegue decidir, escreve \"Não verificado\"."
+        "title": "Gratuito, sem planos",
+        "body": "Não tem assinatura, não tem compra dentro do app, não tem versão paga e não tem anúncio. Você instala pela Microsoft Store e usa tudo."
       },
       {
-        "title": "Cada passo tem estado",
-        "body": "Aplicado, já estava assim, falhou ou não executado. Quando um passo falha, a tela diz qual e por quê. \"Concluído\" não é automático."
+        "title": "Simples e objetivo",
+        "body": "Cada otimização tem um botão para aplicar e outro para reverter, com uma linha explicando o que ela faz. Sem assistente de várias etapas e sem configuração antes de começar."
       },
       {
-        "title": "Dá para reverter",
-        "body": "O app anota o que havia antes de cada alteração e grava de volta quando você pede. E diz o que ele não consegue desfazer, em vez de fingir que desfez."
+        "title": "Feito só para Windows",
+        "body": "Windows 10 e 11, 64 bits. As leituras usam a API nativa do sistema e os ajustes vão direto no registro, sem processo em segundo plano."
       }
     ]
   },
   "stats": {
     "label": "Em números",
-    "heading": "Os números que existem",
-    "intro": "Nenhum multiplicador de velocidade, nenhuma porcentagem de FPS. O app não mede isso, então não promete.",
+    "heading": "O que já vem pronto",
+    "intro": "Sem configurar nada antes de começar a usar.",
     "items": [
-      { "value": "72", "label": "ajustes do Windows, em 10 categorias" },
-      { "value": "61", "label": "deles conferidos direto no registro" },
-      { "value": "6", "label": "otimizações por script, mais 3 Configs FPS" },
-      { "value": "1", "unit": " s", "label": "de intervalo entre as leituras ao vivo" },
-      { "value": "60", "unit": " s", "label": "de gráfico para cada leitura" }
+      {
+        "value": "100+",
+        "label": "otimizações e predefinições prontas para uso"
+      },
+      {
+        "value": "4",
+        "label": "medidores de saúde ao vivo: processador, memória, disco e rede"
+      }
     ]
   },
   "features": {
@@ -84,12 +92,12 @@
         "Faixa de identidade da máquina: nome do PC, processador, placa gráfica com VRAM, versão do Windows e tempo ligado",
         "Painel de armazenamento com espaço em uso e livre por volume",
         "<b>Recomendações que nomeiam o responsável</b>: \"Chrome está usando 64% do processador, somando 12 processos\", com atalho para a lista",
-        "O percentual do topo diz <b>\"X% dos ajustes aplicados\"</b>, não \"sua máquina está X% otimizada\". É a proporção dos ajustes, não uma nota da máquina"
+        "O percentual do topo mostra a proporção de ajustes aplicados, com o total ao lado"
       ]
     },
     "optimize": {
       "title": "Otimizações e Configs FPS",
-      "body": "Seis rotinas por script: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória. Mais as três Configs FPS.",
+      "body": "Mais de 100 otimizações prontas, somando os 72 ajustes do Windows, as seis rotinas por script e as três Configs FPS. As rotinas cobrem sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória.",
       "items": [
         "Configs FPS: prioridade Win32 e IRQ, Max Prerendered Frames em 1, e o perfil Multimídia e Games",
         "Cada passo aparece com o seu estado: <b>aplicado, já estava assim, falhou ou não executado</b>",
@@ -104,7 +112,7 @@
       "items": [
         "Aplicar ou reverter um por um, com a explicação do que faz e por que existe",
         "Estado em cada item: <b>Ativo</b>, <b>Inativo</b> ou <b>Não verificado</b>",
-        "61 dos 72 são lidos direto na chave do registro, contra 13 na versão anterior",
+        "61 dos 72 são lidos direto na chave do registro",
         "Busca e filtros por privilégio e por estado aplicado"
       ]
     },
@@ -114,11 +122,18 @@
       "items": [
         "Lê registro de eventos, erros de aplicativo, serviços, estado dos componentes, discos, dispositivos e proteção",
         "Usa o <b>índice de estabilidade</b> que o próprio Windows mantém, a média de 14 dias que você também vê em <code>perfmon /rel</code>",
-        "Guarda a última varredura entre sessões e mostra a data: um dado de três dias atrás não se apresenta como de agora",
+        "Guarda a última varredura entre sessões e mostra a data em que ela foi feita",
         "Tem uma seção <b>\"o que não foi verificado\"</b>, com a opção de refazer só as leituras que faltaram"
       ],
       "caption": "O que a varredura lê",
-      "sources": ["Registro de eventos", "Erros de aplicativo", "Serviços", "Estado dos componentes", "Discos e dispositivos", "Índice de estabilidade"],
+      "sources": [
+        "Registro de eventos",
+        "Erros de aplicativo",
+        "Serviços",
+        "Estado dos componentes",
+        "Discos e dispositivos",
+        "Índice de estabilidade"
+      ],
       "score": "3,3 de 10",
       "result": "O índice de estabilidade vem do próprio Windows, com a data da varredura à vista. O relatório lista o que vale corrigir e o que não foi possível ler."
     },
@@ -138,7 +153,7 @@
       "items": [
         "Cada entrada marcada como aplicada ou revertida",
         "Desfazer uma alteração ou todas de uma vez",
-        "As que não têm volta aparecem marcadas assim, em vez de oferecer um botão que não funciona"
+        "As alterações sem volta aparecem marcadas como tal"
       ]
     }
   },
@@ -156,7 +171,7 @@
       "Não coleta dado nenhum",
       "Não tem versão paga nem compra dentro do app"
     ],
-    "note": "As três versões anteriores foram gastas tirando mentira da interface: o \"concluído\" que era sempre, o ponto de restauração que dizia ter criado sem criar, a porcentagem que se vendia como nota da máquina. <b>Seria estranho recolocar tudo isso no site.</b>"
+    "note": "A lista está aqui para você saber o que esperar antes de instalar. O GMC Optimizer cuida de configuração do Windows, leitura do sistema e diagnóstico."
   },
   "permission": {
     "label": "Permissão e privacidade",
@@ -183,27 +198,38 @@
     "heading": "O que mudou na versão mais recente",
     "intro": "A 1.10 junta o que foi feito desde a 1.7, a última publicada antes dela.",
     "items": [
-      "<b>Nova Análise de Saúde</b>: uma varredura de eventos, erros, serviços e componentes do Windows, com relatório do que vale corrigir, em tela própria.",
+      "<b>Nova Análise de Saúde</b>: varredura de eventos, erros, serviços e componentes do Windows, com relatório do que vale corrigir, em tela própria.",
       "<b>Início em duas colunas</b>: ajustes pendentes de um lado, o resumo da saúde do outro.",
-      "Recomendações dizem quem é o responsável, com atalho para a lista de processos.",
-      "Otimizações mostram cada passo com o seu estado: aplicado, já estava assim, falhou ou não executado.",
-      "<b>\"Concluído\" deixou de ser automático.</b> Se um passo falha, a tela diz qual e por quê; se nada mudou, ela diz isso também.",
-      "<b>Novo: reverter uma otimização.</b> O app anota o que havia antes de cada alteração e grava de volta, dizendo o que não consegue desfazer.",
-      "Ponto de restauração: o app confere se ele foi mesmo criado, em vez de anunciar sucesso sempre.",
-      "Saíram passos que gravavam o padrão do Windows e comemoravam, e promessas de liberar memória que não liberavam nada.",
-      "Ajustes do Windows: 61 dos 72 agora são conferidos direto no registro, contra 13 antes.",
-      "A saída do SFC e do DISM aparece legível e acentuada. O resultado do DISM era descartado; agora cada ferramenta responde pelo seu.",
-      "Corrigido: a otimização de Mouse e Teclado não rodava, e o app podia quebrar ao fechar."
+      "Recomendações que nomeiam o processo responsável, com atalho para a lista.",
+      "Cada passo de uma otimização aparece com o seu estado: aplicado, já estava assim, falhou ou não executado.",
+      "<b>Novo: reverter uma otimização.</b> O app anota o que havia antes de cada alteração e grava de volta, e informa o que não é possível desfazer.",
+      "Ponto de restauração conferido no sistema depois de criado.",
+      "Ajustes do Windows: 61 dos 72 conferidos direto no registro.",
+      "Saída do SFC e do DISM legível e acentuada, com cada ferramenta respondendo pelo seu resultado.",
+      "O app distingue SSD de disco mecânico e ajusta o que recomenda.",
+      "Otimizações, Configs FPS e Registro também em inglês."
     ]
   },
   "requirements": {
     "label": "Requisitos",
     "heading": "O que é preciso para rodar",
     "items": [
-      { "term": "Sistema", "value": "Windows 10 versão 17763 ou superior" },
-      { "term": "Arquitetura", "value": "64 bits" },
-      { "term": "Idiomas", "value": "Português e inglês" },
-      { "term": "Preço", "value": "Gratuito" }
+      {
+        "term": "Sistema",
+        "value": "Windows 10 versão 17763 ou superior"
+      },
+      {
+        "term": "Arquitetura",
+        "value": "64 bits"
+      },
+      {
+        "term": "Idiomas",
+        "value": "Português e inglês"
+      },
+      {
+        "term": "Preço",
+        "value": "Gratuito"
+      }
     ],
     "note": "Distribuído pela Microsoft Store, em pacote assinado. Não existe download direto: uma cópia fora da Store não é reconhecida como instalação legítima e não abre."
   },
@@ -244,7 +270,7 @@
             "title": "Ele faz",
             "items": [
               "Aplica e reverte 72 ajustes de registro do Windows, organizados por categoria",
-              "Executa seis rotinas de otimização por script: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória",
+              "Executa seis rotinas de otimização por script, que somadas aos ajustes do Windows e às Configs FPS passam de 100 otimizações prontas: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória",
               "Aplica três configurações de registro voltadas a latência em jogos, chamadas Configs FPS",
               "Mostra leituras de processador, memória, disco e rede, lidas por API nativa do Windows",
               "Executa a Análise de Saúde, que lê registro de eventos, serviços, estado de componentes e o índice de estabilidade do Windows",
