@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroHome from '../components/HeroHome.astro';
+import TechCarousel from '../components/TechCarousel.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { useTranslations, type Lang } from '../i18n/utils';
+import { personSchema } from '../data/schema';
+
+const lang: Lang = 'pt';
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={t('site.title')}
+  description={t('site.description')}
+  lang={lang}
+  canonicalPath="/"
+  schema={personSchema()}
+>
+  <HeroHome lang={lang} />
+  <TechCarousel />
+  <ProjectGrid lang={lang} />
+</BaseLayout>

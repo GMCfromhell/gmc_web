@@ -1,0 +1,71 @@
+---
+import { languages, langLabels, defaultLang, getLocalizedPath, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  canonicalPath: string;
+}
+
+const { lang, canonicalPath } = Astro.props;
+const entries = Object.keys(languages) as Lang[];
+---
+
+<div class="lang-picker" id="lang-picker" data-open="false">
+  <button
+    type="button"
+    class="lang-button"
+    id="lang-button"
+    aria-expanded="false"
+    aria-controls="lang-menu"
+    aria-haspopup="true"
+  >
+    <span>{langLabels[lang]}</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+  <div class="lang-menu" id="lang-menu" hidden>
+    {
+      entries.map((l) => (
+        <a
+          href={getLocalizedPath(canonicalPath, l) || '/'}
+          hreflang={l === defaultLang ? 'pt-BR' : 'en-US'}
+          aria-current={l === lang ? 'true' : undefined}
+        >
+          {languages[l]}
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var picker = document.getElementById('lang-picker');
+    var button = document.getElementById('lang-button');
+    var menu = document.getElementById('lang-menu');
+    if (!picker || !button || !menu) return;
+
+    function setOpen(open) {
+      picker.setAttribute('data-open', String(open));
+      button.setAttribute('aria-expanded', String(open));
+      menu.hidden = !open;
+    }
+
+    button.addEventListener('click', function (event) {
+      event.stopPropagation();
+      setOpen(button.getAttribute('aria-expanded') !== 'true');
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!picker.contains(event.target)) setOpen(false);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        button.focus();
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductPage from '../../components/ProductPage.astro';
+import { useTranslations, type Lang } from '../../i18n/utils';
+import { softwareSchema } from '../../data/schema';
+
+const lang: Lang = 'pt';
+const t = useTranslations(lang);
+const description = t('gmcoptimizer.metaDescription');
+---
+
+<BaseLayout
+  title={t('gmcoptimizer.metaTitle')}
+  description={description}
+  lang={lang}
+  canonicalPath="/gmcoptimizer"
+  ogType="product"
+  schema={softwareSchema(lang, description)}
+  showLegalLinks
+>
+  <ProductPage lang={lang} />
+</BaseLayout>

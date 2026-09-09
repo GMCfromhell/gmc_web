@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { languages, defaultLang, langHtmlLocale, type Lang } from '../i18n/utils';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  canonicalPath: string;
+  ogType?: string;
+  schema?: object;
+  showLegalLinks?: boolean;
+  noAlternates?: boolean;
+}
+
+const {
+  title,
+  description,
+  lang,
+  canonicalPath,
+  ogType = 'website',
+  schema,
+  showLegalLinks = false,
+  noAlternates = false,
+} = Astro.props;
+
+const site = 'https://gmc.dev.br';
+const localizedUrl = (l: string) => (l === defaultLang ? `${site}${canonicalPath}` : `${site}/${l}${canonicalPath}`);
+const canonicalUrl = localizedUrl(lang);
+const htmlLang = langHtmlLocale[lang];
+const ogImage = `${site}/og.png`;
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/sora/Sora-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope/Manrope-latin.woff2" crossorigin />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Gabriel Correa GMC" />
+    <meta property="og:locale" content={htmlLang.replace('-', '_')} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    {
+      !noAlternates &&
+        Object.keys(languages).map((l) => (
+          <link rel="alternate" hreflang={langHtmlLocale[l]} href={localizedUrl(l)} />
+        ))
+    }
+    {!noAlternates && <link rel="alternate" hreflang="x-default" href={localizedUrl(defaultLang)} />}
+    {noAlternates && <meta name="robots" content="noindex" />}
+
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('gmc-theme');
+          var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <Header lang={lang} canonicalPath={canonicalPath} />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer lang={lang} showLegalLinks={showLegalLinks} />
+  </body>
+</html>

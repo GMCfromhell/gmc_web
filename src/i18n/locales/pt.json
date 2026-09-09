@@ -1,0 +1,428 @@
+{
+  "site": {
+    "title": "Gabriel Correa GMC",
+    "description": "Desenvolvedor brasileiro. Aplicativos e ferramentas para Windows, web e mobile, com foco em desempenho e diagnóstico."
+  },
+  "nav": {
+    "brand": "Gabriel Correa",
+    "label": "Navegação principal",
+    "home": "Início",
+    "menu": "Abrir menu",
+    "theme": "Alternar tema claro e escuro",
+    "terms": "Termos de Uso",
+    "privacy": "Política de Privacidade",
+    "skipToContent": "Pular para o conteúdo"
+  },
+  "hero": {
+    "title": "Gabriel Correa GMC",
+    "tagline": "Desenvolvedor brasileiro. Faço aplicativos e ferramentas para <strong>Windows</strong>, <strong>web</strong> e <strong>mobile</strong>, com foco em desempenho, diagnóstico e software que diz a verdade sobre o que fez."
+  },
+  "projects": {
+    "label": "Portfólio",
+    "heading": "Projetos disponíveis",
+    "intro": "O que está publicado e em uso hoje.",
+    "viewProject": "Ver projeto",
+    "comingSoon": "Em breve",
+    "comingSoonTitle": "Novos projetos",
+    "comingSoonDesc": "Outros aplicativos e ferramentas em desenvolvimento. Volte em breve."
+  },
+  "gmcoptimizer": {
+    "label": "Windows · Microsoft Store",
+    "metaTitle": "GMC Optimizer para Windows",
+    "metaDescription": "O GMC Optimizer aplica ajustes do Windows e confere no registro quais estão mesmo ativos. 72 ajustes, 61 verificados direto na chave. Gratuito, na Microsoft Store.",
+    "shortDesc": "Aplica ajustes do Windows e confere no registro quais estão mesmo ativos. Cada passo diz o que aconteceu, e dá para reverter.",
+    "lede": "Aplica o ajuste e confere se ele ficou mesmo ativo.",
+    "sub": "São 72 ajustes do Windows, e 61 deles o app lê direto na chave em vez de supor que deu certo. Quando não consegue conferir, ele escreve \"Não verificado\". Não chama de inativo, não chama de aplicado.",
+    "cta": "Obter na Microsoft Store",
+    "ctaSecondary": "Ver o que ele faz",
+    "badges": ["v1.10.0", "Gratuito", "Windows 10 e 11 · 64 bits", "Sem coleta de dados"],
+    "captions": {
+      "home": "Tela Início do GMC Optimizer: leituras ao vivo de processador, memória, disco e rede, ajustes pendentes e o resumo da Análise de Saúde.",
+      "optimize": "Tela Otimizações: seis rotinas por script e as Configs FPS, cada uma com botão de execução.",
+      "windows": "Tela Configurações do Windows: ajustes por categoria, com Ativo, Inativo ou Não verificado em cada um."
+    }
+  },
+  "angle": {
+    "label": "O diferencial",
+    "heading": "Um otimizador que responde pelo que fez",
+    "intro": "A categoria inteira promete resultado e some na hora de mostrar prova. Este aqui prefere mostrar estado.",
+    "items": [
+      {
+        "title": "Confere no registro",
+        "body": "A verificação é derivada do mesmo arquivo .reg que o botão usa para aplicar, então os dois não podem divergir. Onde ele não consegue decidir, escreve \"Não verificado\"."
+      },
+      {
+        "title": "Cada passo tem estado",
+        "body": "Aplicado, já estava assim, falhou ou não executado. Quando um passo falha, a tela diz qual e por quê. \"Concluído\" não é automático."
+      },
+      {
+        "title": "Dá para reverter",
+        "body": "O app anota o que havia antes de cada alteração e grava de volta quando você pede. E diz o que ele não consegue desfazer, em vez de fingir que desfez."
+      }
+    ]
+  },
+  "stats": {
+    "label": "Em números",
+    "heading": "Os números que existem",
+    "intro": "Nenhum multiplicador de velocidade, nenhuma porcentagem de FPS. O app não mede isso, então não promete.",
+    "items": [
+      { "value": "72", "label": "ajustes do Windows, em 10 categorias" },
+      { "value": "61", "label": "deles conferidos direto no registro" },
+      { "value": "6", "label": "otimizações por script, mais 3 Configs FPS" },
+      { "value": "1", "unit": " s", "label": "de intervalo entre as leituras ao vivo" },
+      { "value": "60", "unit": " s", "label": "de gráfico para cada leitura" }
+    ]
+  },
+  "features": {
+    "label": "Recursos",
+    "heading": "O que tem dentro",
+    "intro": "Seis telas, e o que cada uma resolve.",
+    "home": {
+      "title": "Início: um painel, não uma lista de atalhos",
+      "body": "Processador, memória, disco e rede atualizados a cada 1 segundo, com gráfico dos últimos 60 segundos. A leitura é nativa do Windows: não depende do idioma do sistema e não deixa processo em segundo plano.",
+      "items": [
+        "Faixa de identidade da máquina: nome do PC, processador, placa gráfica com VRAM, versão do Windows e tempo ligado",
+        "Painel de armazenamento com espaço em uso e livre por volume",
+        "<b>Recomendações que nomeiam o responsável</b>: \"Chrome está usando 64% do processador, somando 12 processos\", com atalho para a lista",
+        "O percentual do topo diz <b>\"X% dos ajustes aplicados\"</b>, não \"sua máquina está X% otimizada\". É a proporção dos ajustes, não uma nota da máquina"
+      ]
+    },
+    "optimize": {
+      "title": "Otimizações e Configs FPS",
+      "body": "Seis rotinas por script: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória. Mais as três Configs FPS.",
+      "items": [
+        "Configs FPS: prioridade Win32 e IRQ, Max Prerendered Frames em 1, e o perfil Multimídia e Games",
+        "Cada passo aparece com o seu estado: <b>aplicado, já estava assim, falhou ou não executado</b>",
+        "Reverter uma otimização: o diálogo diz quantos valores e serviços serão restaurados",
+        "E diz também o que ele <b>não</b> consegue desfazer: plano de energia, ajuste de rede por netsh e limpeza de cache. Para esses, o caminho é o ponto de restauração",
+        "Ponto de restauração conferido: o app lê o sistema depois de pedir e só diz que criou quando ele existe"
+      ]
+    },
+    "windows": {
+      "title": "Ajustes do Windows",
+      "body": "72 ajustes de privacidade, aparência, sistema, menu Iniciar, barra de tarefas, explorador de arquivos, jogos, multitarefa, IA e atualização, organizados por categoria.",
+      "items": [
+        "Aplicar ou reverter um por um, com a explicação do que faz e por que existe",
+        "Estado em cada item: <b>Ativo</b>, <b>Inativo</b> ou <b>Não verificado</b>",
+        "61 dos 72 são lidos direto na chave do registro, contra 13 na versão anterior",
+        "Busca e filtros por privilégio e por estado aplicado"
+      ]
+    },
+    "health": {
+      "title": "Análise de Saúde",
+      "body": "A novidade da versão 1.10, em tela própria. Uma varredura do que o Windows já sabe sobre si mesmo, terminando num relatório do que vale corrigir.",
+      "items": [
+        "Lê registro de eventos, erros de aplicativo, serviços, estado dos componentes, discos, dispositivos e proteção",
+        "Usa o <b>índice de estabilidade</b> que o próprio Windows mantém, a média de 14 dias que você também vê em <code>perfmon /rel</code>",
+        "Guarda a última varredura entre sessões e mostra a data: um dado de três dias atrás não se apresenta como de agora",
+        "Tem uma seção <b>\"o que não foi verificado\"</b>, com a opção de refazer só as leituras que faltaram"
+      ],
+      "caption": "O que a varredura lê",
+      "sources": ["Registro de eventos", "Erros de aplicativo", "Serviços", "Estado dos componentes", "Discos e dispositivos", "Índice de estabilidade"],
+      "score": "3,3 de 10",
+      "result": "O índice de estabilidade vem do próprio Windows, com a data da varredura à vista. O relatório lista o que vale corrigir e o que não foi possível ler."
+    },
+    "tools": {
+      "title": "Ferramentas",
+      "body": "O que normalmente exige abrir cinco janelas diferentes do Windows, com a saída legível.",
+      "items": [
+        "Verificação de arquivos do sistema com <b>SFC e DISM</b>, cada ferramenta respondendo pelo seu resultado",
+        "Saúde do disco com nível de desgaste, distinguindo SSD de disco mecânico",
+        "Temperatura de processador, placa gráfica e disco, sob demanda",
+        "Diagnóstico pelo registro de eventos, programas de inicialização, análise do registro e diagnóstico de Wi-Fi"
+      ]
+    },
+    "history": {
+      "title": "Histórico",
+      "body": "O que mudou, quando mudou, e como voltar atrás.",
+      "items": [
+        "Cada entrada marcada como aplicada ou revertida",
+        "Desfazer uma alteração ou todas de uma vez",
+        "As que não têm volta aparecem marcadas assim, em vez de oferecer um botão que não funciona"
+      ]
+    }
+  },
+  "honesty": {
+    "label": "Escopo",
+    "heading": "O que ele não faz",
+    "intro": "Está aqui porque é mais útil saber o limite antes de instalar do que depois.",
+    "items": [
+      "Não limpa arquivo temporário",
+      "Não desfragmenta disco",
+      "Não remove vírus",
+      "Não acelera a internet",
+      "Não promete porcentagem de FPS nem multiplicador de velocidade",
+      "Não instala serviço e não fica residente",
+      "Não coleta dado nenhum",
+      "Não tem versão paga nem compra dentro do app"
+    ],
+    "note": "As três versões anteriores foram gastas tirando mentira da interface: o \"concluído\" que era sempre, o ponto de restauração que dizia ter criado sem criar, a porcentagem que se vendia como nota da máquina. <b>Seria estranho recolocar tudo isso no site.</b>"
+  },
+  "permission": {
+    "label": "Permissão e privacidade",
+    "heading": "Ele abre sem pedir Administrador",
+    "intro": "A permissão é pedida por ação, pelo próprio Windows, e só quando a ação precisa dela.",
+    "items": [
+      {
+        "title": "Elevação por ação",
+        "body": "Quando uma ação precisa de Administrador, o Windows pergunta na hora. Nada roda elevado o tempo todo."
+      },
+      {
+        "title": "Você sabe antes de clicar",
+        "body": "O item já vem marcado com o selo Admin antes do clique, então não existe prompt inesperado."
+      },
+      {
+        "title": "Nada sai da máquina",
+        "body": "Sem serviço instalado, sem processo residente, sem telemetria e sem coleta de dado pessoal."
+      }
+    ],
+    "adminBadge": "Admin"
+  },
+  "release": {
+    "label": "Novidades",
+    "heading": "O que mudou na versão mais recente",
+    "intro": "A 1.10 junta o que foi feito desde a 1.7, a última publicada antes dela.",
+    "items": [
+      "<b>Nova Análise de Saúde</b>: uma varredura de eventos, erros, serviços e componentes do Windows, com relatório do que vale corrigir, em tela própria.",
+      "<b>Início em duas colunas</b>: ajustes pendentes de um lado, o resumo da saúde do outro.",
+      "Recomendações dizem quem é o responsável, com atalho para a lista de processos.",
+      "Otimizações mostram cada passo com o seu estado: aplicado, já estava assim, falhou ou não executado.",
+      "<b>\"Concluído\" deixou de ser automático.</b> Se um passo falha, a tela diz qual e por quê; se nada mudou, ela diz isso também.",
+      "<b>Novo: reverter uma otimização.</b> O app anota o que havia antes de cada alteração e grava de volta, dizendo o que não consegue desfazer.",
+      "Ponto de restauração: o app confere se ele foi mesmo criado, em vez de anunciar sucesso sempre.",
+      "Saíram passos que gravavam o padrão do Windows e comemoravam, e promessas de liberar memória que não liberavam nada.",
+      "Ajustes do Windows: 61 dos 72 agora são conferidos direto no registro, contra 13 antes.",
+      "A saída do SFC e do DISM aparece legível e acentuada. O resultado do DISM era descartado; agora cada ferramenta responde pelo seu.",
+      "Corrigido: a otimização de Mouse e Teclado não rodava, e o app podia quebrar ao fechar."
+    ]
+  },
+  "requirements": {
+    "label": "Requisitos",
+    "heading": "O que é preciso para rodar",
+    "items": [
+      { "term": "Sistema", "value": "Windows 10 versão 17763 ou superior" },
+      { "term": "Arquitetura", "value": "64 bits" },
+      { "term": "Idiomas", "value": "Português e inglês" },
+      { "term": "Preço", "value": "Gratuito" }
+    ],
+    "note": "Distribuído pela Microsoft Store, em pacote assinado. Não existe download direto: uma cópia fora da Store não é reconhecida como instalação legítima e não abre."
+  },
+  "closing": {
+    "heading": "Instale pela Microsoft Store",
+    "body": "Gratuito, sem anúncio e sem compra dentro do app. A instalação e as atualizações passam pela Store."
+  },
+  "footer": {
+    "rights": "© 2026 Gabriel Correa GMC. Todos os direitos reservados.",
+    "legalLabel": "Links legais"
+  },
+  "notFound": {
+    "pageTitle": "Página não encontrada",
+    "heading": "Esta página não existe",
+    "body": "O endereço que você abriu não existe ou foi movido.",
+    "cta": "Voltar ao início"
+  },
+  "terms": {
+    "pageTitle": "Termos de Uso do GMC Optimizer",
+    "metaDescription": "Termos de Uso do GMC Optimizer, aplicativo gratuito para Windows distribuído pela Microsoft Store.",
+    "heading": "Termos de Uso",
+    "updated": "Última atualização: 9 de setembro de 2026",
+    "sections": [
+      {
+        "title": "1. Aceitação dos Termos",
+        "paragraphs": [
+          "Ao instalar ou usar o GMC Optimizer (\"o Aplicativo\"), você concorda com estes Termos de Uso. Se não concordar com qualquer parte deles, não use o Aplicativo.",
+          "O Aplicativo apresenta estes Termos na primeira abertura e pede aceitação antes de liberar as funções."
+        ]
+      },
+      {
+        "title": "2. O que o Aplicativo é",
+        "paragraphs": [
+          "O GMC Optimizer é um utilitário gratuito para Windows que aplica ajustes de configuração do sistema, executa rotinas de otimização e apresenta leituras e diagnósticos que o próprio Windows fornece."
+        ],
+        "lists": [
+          {
+            "title": "Ele faz",
+            "items": [
+              "Aplica e reverte 72 ajustes de registro do Windows, organizados por categoria",
+              "Executa seis rotinas de otimização por script: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória",
+              "Aplica três configurações de registro voltadas a latência em jogos, chamadas Configs FPS",
+              "Mostra leituras de processador, memória, disco e rede, lidas por API nativa do Windows",
+              "Executa a Análise de Saúde, que lê registro de eventos, serviços, estado de componentes e o índice de estabilidade do Windows",
+              "Reúne ferramentas de diagnóstico: SFC, DISM, saúde do disco, temperatura, programas de inicialização, análise do registro e diagnóstico de Wi-Fi"
+            ]
+          },
+          {
+            "title": "Ele não faz",
+            "items": [
+              "Não limpa arquivos temporários e não desfragmenta discos",
+              "Não remove vírus e não substitui um antivírus",
+              "Não acelera a conexão de internet",
+              "Não promete percentual de FPS nem multiplicador de desempenho, porque não mede isso",
+              "Não instala serviço, não permanece em execução em segundo plano e não coleta dados"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3. Requisitos e permissões",
+        "paragraphs": [
+          "O Aplicativo requer Windows 10 versão 17763 (1809) ou superior, em 64 bits, e é distribuído exclusivamente pela Microsoft Store, em pacote assinado.",
+          "O Aplicativo não é executado como Administrador na abertura. Quando uma ação específica precisa de elevação, o próprio Windows solicita a confirmação naquele momento, e o item correspondente é identificado com o selo Admin antes de ser acionado."
+        ]
+      },
+      {
+        "title": "4. Riscos e responsabilidade do usuário",
+        "paragraphs": [
+          "O Aplicativo altera configurações do sistema operacional. Algumas alterações só entram em vigor após reinicialização, e alterações de configuração podem afetar o comportamento do Windows e de programas instalados."
+        ],
+        "callout": "Antes de aplicar otimizações, recomendamos criar um ponto de restauração do Windows. O Aplicativo oferece essa criação e confere se o ponto foi efetivamente criado antes de informar sucesso. Nem toda alteração é reversível pelo Aplicativo: planos de energia, ajustes de rede aplicados por netsh e limpezas de cache não são desfeitos por ele, e para esses casos o ponto de restauração é o caminho de volta.",
+        "lists": [
+          {
+            "title": "Você concorda em",
+            "items": [
+              "Usar o Aplicativo apenas para fins legítimos e em máquinas sob sua responsabilidade",
+              "Ler a descrição de cada ajuste antes de aplicá-lo",
+              "Criar um ponto de restauração antes de aplicar otimizações",
+              "Não modificar, redistribuir ou fazer engenharia reversa do Aplicativo sem autorização"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "5. Isenção de garantias",
+        "paragraphs": [
+          "O Aplicativo é fornecido \"COMO ESTÁ\", sem garantias de qualquer natureza, expressas ou implícitas, incluindo garantias de adequação a uma finalidade específica, de funcionamento ininterrupto ou de ausência de erros.",
+          "Você usa o Aplicativo por sua conta e risco."
+        ]
+      },
+      {
+        "title": "6. Limitação de responsabilidade",
+        "paragraphs": [
+          "Na máxima extensão permitida pela lei aplicável, o desenvolvedor não se responsabiliza por danos diretos, indiretos, incidentais ou consequenciais decorrentes do uso ou da impossibilidade de uso do Aplicativo, incluindo perda de dados, perda de desempenho ou necessidade de reinstalação do sistema operacional."
+        ]
+      },
+      {
+        "title": "7. Propriedade intelectual",
+        "paragraphs": [
+          "O Aplicativo, seu código, sua interface, sua marca e seus materiais são de propriedade de Gabriel Correa GMC e protegidos pela legislação de direitos autorais. Nenhum direito de propriedade intelectual é transferido pelo uso do Aplicativo."
+        ]
+      },
+      {
+        "title": "8. Atualizações e disponibilidade",
+        "paragraphs": [
+          "Atualizações são distribuídas pela Microsoft Store. O desenvolvedor pode alterar, suspender ou descontinuar o Aplicativo, no todo ou em parte, a qualquer momento.",
+          "Estes Termos podem ser revisados. A data no topo desta página indica a última revisão, e o uso continuado do Aplicativo após uma revisão significa aceitação da versão vigente."
+        ]
+      },
+      {
+        "title": "9. Legislação aplicável",
+        "paragraphs": [
+          "Estes Termos são regidos pelas leis da República Federativa do Brasil, e o foro competente é o do domicílio do usuário, quando aplicável a legislação consumerista."
+        ]
+      },
+      {
+        "title": "10. Contato",
+        "paragraphs": [
+          "Dúvidas sobre estes Termos podem ser enviadas pela página do GMC Optimizer na Microsoft Store, canal oficial de contato do Aplicativo."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "pageTitle": "Política de Privacidade do GMC Optimizer",
+    "metaDescription": "Política de Privacidade do GMC Optimizer. O aplicativo não coleta dados pessoais e executa tudo localmente na sua máquina.",
+    "heading": "Política de Privacidade",
+    "updated": "Última atualização: 9 de setembro de 2026",
+    "sections": [
+      {
+        "title": "1. Resumo",
+        "callout": "O GMC Optimizer não coleta dados. Ele não envia informação nenhuma para servidores do desenvolvedor, não instala serviço, não permanece em execução em segundo plano e não possui telemetria ou analytics.",
+        "paragraphs": [
+          "Esta Política descreve como o GMC Optimizer (\"o Aplicativo\") trata informações. Ela vale para o Aplicativo distribuído pela Microsoft Store e para este site."
+        ]
+      },
+      {
+        "title": "2. Informações que o Aplicativo não coleta",
+        "lists": [
+          {
+            "items": [
+              "Nome, e-mail, endereço ou qualquer dado que identifique você",
+              "Conteúdo de arquivos pessoais",
+              "Histórico ou dados de navegação na web",
+              "Localização geográfica",
+              "Dados de outros aplicativos instalados",
+              "Estatísticas de uso, quais funções foram executadas ou com que frequência",
+              "Relatórios automáticos de falha enviados ao desenvolvedor"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3. Processamento local",
+        "paragraphs": [
+          "Todas as leituras de sistema, ajustes de registro, rotinas de otimização e diagnósticos são executados localmente, na sua máquina.",
+          "As leituras ao vivo de processador, memória, disco e rede usam a API nativa do Windows. As rotinas de otimização são executadas por scripts PowerShell que acompanham o pacote do Aplicativo. Os ajustes de registro são aplicados a partir de arquivos .reg que também acompanham o pacote.",
+          "Os resultados de uma varredura, o histórico de alterações e as preferências de idioma e tema ficam gravados apenas no armazenamento local do Aplicativo, no seu computador, e podem ser apagados por você dentro do próprio Aplicativo ou removendo o Aplicativo."
+        ]
+      },
+      {
+        "title": "4. Acesso à internet",
+        "paragraphs": [
+          "O Aplicativo declara a capacidade de acesso à internet no pacote pelos seguintes motivos, e apenas por eles:"
+        ],
+        "lists": [
+          {
+            "items": [
+              "Abrir, no seu navegador, a página do Aplicativo na Microsoft Store quando você usa a opção de verificar atualizações",
+              "Abrir, no seu navegador, os endereços destes Termos e desta Política",
+              "Testes de conectividade do diagnóstico de Wi-Fi, quando você executa essa ferramenta, que verificam o alcance do gateway e da internet"
+            ]
+          }
+        ],
+        "paragraphs2": [
+          "Nenhuma dessas operações envia dados sobre você ou sobre a sua máquina para o desenvolvedor."
+        ]
+      },
+      {
+        "title": "5. Microsoft Store",
+        "paragraphs": [
+          "A instalação, a verificação de licença e as atualizações do Aplicativo são intermediadas pela Microsoft Store. A Microsoft coleta e trata os próprios dados de aquisição e uso conforme a Declaração de Privacidade da Microsoft, que é independente desta Política.",
+          "O desenvolvedor tem acesso, no painel de publicação da Microsoft, apenas a relatórios agregados e anônimos, como número de visualizações e de instalações. Esses relatórios não identificam usuários individuais."
+        ]
+      },
+      {
+        "title": "6. Este site",
+        "paragraphs": [
+          "Este site é estático e não usa cookies, analytics, pixels de rastreamento ou formulários. Nenhum recurso é carregado de servidores de terceiros: fontes, ícones e imagens são servidos pelo próprio site.",
+          "O site é hospedado no GitHub Pages, que pode registrar dados técnicos de acesso, como endereço IP, conforme a política de privacidade do GitHub."
+        ]
+      },
+      {
+        "title": "7. Crianças",
+        "paragraphs": [
+          "O Aplicativo é uma ferramenta técnica de configuração de sistema, não é direcionado a menores de 13 anos e não coleta intencionalmente dados de crianças."
+        ]
+      },
+      {
+        "title": "8. Seus direitos",
+        "paragraphs": [
+          "Como o Aplicativo não coleta nem armazena dados pessoais em servidores, não há dado pessoal sob controle do desenvolvedor a ser acessado, corrigido, portado ou excluído.",
+          "Os dados gravados localmente pelo Aplicativo ficam sob o seu controle e podem ser removidos por você a qualquer momento.",
+          "Esta Política foi escrita em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018) e com o Regulamento Geral de Proteção de Dados da União Europeia (GDPR)."
+        ]
+      },
+      {
+        "title": "9. Alterações nesta Política",
+        "paragraphs": [
+          "Esta Política pode ser revisada quando o comportamento do Aplicativo mudar. A data no topo desta página indica a última revisão. Alterações relevantes serão refletidas também nas notas de versão publicadas na Microsoft Store."
+        ]
+      },
+      {
+        "title": "10. Contato",
+        "paragraphs": [
+          "Dúvidas sobre esta Política podem ser enviadas pela página do GMC Optimizer na Microsoft Store, canal oficial de contato do Aplicativo."
+        ]
+      }
+    ]
+  }
+}

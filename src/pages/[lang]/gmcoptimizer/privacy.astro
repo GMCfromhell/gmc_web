@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+import { useTranslations, languages, defaultLang, type Lang } from '../../../i18n/utils';
+
+export const getStaticPaths = (() =>
+  Object.keys(languages)
+    .filter((l) => l !== defaultLang)
+    .map((l) => ({ params: { lang: l } }))) satisfies GetStaticPaths;
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={t('privacy.pageTitle')}
+  description={t('privacy.metaDescription')}
+  lang={lang}
+  canonicalPath="/gmcoptimizer/privacy.html"
+  showLegalLinks
+>
+  <LegalContent lang={lang} namespace="privacy" />
+</BaseLayout>

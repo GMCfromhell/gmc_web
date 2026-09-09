@@ -1,0 +1,196 @@
+---
+import HeroProject from './HeroProject.astro';
+import StatStrip from './StatStrip.astro';
+import FeatureSection from './FeatureSection.astro';
+import HonestyPanel from './HonestyPanel.astro';
+import { useTranslations, type Lang } from '../i18n/utils';
+import { product } from '../data/product';
+import { shots } from '../data/shots';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const angleItems: { title: string; body: string }[] = t('angle.items');
+const statItems: { value: string; unit?: string; label: string }[] = t('stats.items');
+const permissionItems: { title: string; body: string }[] = t('permission.items');
+const releaseItems: string[] = t('release.items');
+const requirementItems: { term: string; value: string }[] = t('requirements.items');
+const healthSources: string[] = t('features.health.sources');
+const captions = t('gmcoptimizer.captions');
+const shot = shots[lang];
+---
+
+<HeroProject lang={lang} />
+
+<section class="section">
+  <div class="container">
+    <p class="section-label">{t('angle.label')}</p>
+    <h2 class="section-title">{t('angle.heading')}</h2>
+    <p class="section-intro">{t('angle.intro')}</p>
+
+    <div class="angle-grid">
+      {
+        angleItems.map((item) => (
+          <div class="angle-item">
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <p class="section-label">{t('stats.label')}</p>
+    <h2 class="section-title">{t('stats.heading')}</h2>
+    <p class="section-intro is-spaced">{t('stats.intro')}</p>
+    <StatStrip stats={statItems} />
+  </div>
+</section>
+
+<section class="section" id="recursos">
+  <div class="container">
+    <p class="section-label">{t('features.label')}</p>
+    <h2 class="section-title">{t('features.heading')}</h2>
+    <p class="section-intro">{t('features.intro')}</p>
+
+    <FeatureSection
+      first
+      title={t('features.home.title')}
+      body={t('features.home.body')}
+      items={t('features.home.items')}
+      image={{ src: shot.home.src, alt: captions.home, caption: captions.home, width: shot.home.width, height: shot.home.height }}
+    />
+
+    <FeatureSection
+      reversed
+      title={t('features.optimize.title')}
+      body={t('features.optimize.body')}
+      items={t('features.optimize.items')}
+      image={{ src: shot.optimize.src, alt: captions.optimize, caption: captions.optimize, width: shot.optimize.width, height: shot.optimize.height }}
+    />
+
+    <FeatureSection
+      title={t('features.windows.title')}
+      body={t('features.windows.body')}
+      items={t('features.windows.items')}
+      image={{ src: shot.windows.src, alt: captions.windows, caption: captions.windows, width: shot.windows.width, height: shot.windows.height }}
+    />
+
+    <FeatureSection
+      aside
+      reversed
+      title={t('features.health.title')}
+      body={t('features.health.body')}
+      items={t('features.health.items')}
+    >
+      <div class="health-panel">
+        <p class="health-caption">{t('features.health.caption')}</p>
+        <div class="health-sources">
+          {healthSources.map((source) => <div class="health-source">{source}</div>)}
+        </div>
+        <div class="health-result">
+          <span class="health-score">{t('features.health.score')}</span>
+          <p>{t('features.health.result')}</p>
+        </div>
+      </div>
+    </FeatureSection>
+
+    <div class="feature-pair">
+      {
+        ['tools', 'history'].map((key) => (
+          <article class="feature-copy">
+            <h3>{t(`features.${key}.title`)}</h3>
+            <p>{t(`features.${key}.body`)}</p>
+            <ul class="feature-list">
+              {(t(`features.${key}.items`) as string[]).map((item) => (
+                <li set:html={item} />
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<HonestyPanel lang={lang} />
+
+<section class="section-tight">
+  <div class="container">
+    <p class="section-label">{t('permission.label')}</p>
+    <h2 class="section-title">{t('permission.heading')}</h2>
+    <p class="section-intro">{t('permission.intro')}</p>
+
+    <div class="permission">
+      {
+        permissionItems.map((item, index) => (
+          <div class="permission-item">
+            <h3>
+              <span>{item.title}</span>
+              {index === 1 && <span class="admin-pill">{t('permission.adminBadge')}</span>}
+            </h3>
+            <p>{item.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-label">{t('release.label')}</p>
+    <h2 class="section-title">{t('release.heading')}</h2>
+    <p class="section-intro">{t('release.intro')}</p>
+
+    <div class="release-panel">
+      <div class="release-head">
+        <span class="release-version">v{product.version}</span>
+      </div>
+      <ul class="release-list">
+        {releaseItems.map((item) => <li set:html={item}></li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <p class="section-label">{t('requirements.label')}</p>
+    <h2 class="section-title">{t('requirements.heading')}</h2>
+    <p class="section-intro">{t('requirements.note')}</p>
+
+    <dl class="requirements">
+      {
+        requirementItems.map((item) => (
+          <div class="requirement">
+            <dt>{item.term}</dt>
+            <dd>{item.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container">
+    <h2>{t('closing.heading')}</h2>
+    <p>{t('closing.body')}</p>
+    <div class="cta-row">
+      <a class="cta" href={product.storeUrl} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 3h8.6v8.6H3V3Zm10.4 0H22v8.6h-8.6V3ZM3 13.4h8.6V22H3v-8.6Zm10.4 0H22V22h-8.6v-8.6Z"></path>
+        </svg>
+        <span>{t('gmcoptimizer.cta')}</span>
+      </a>
+    </div>
+  </div>
+</section>

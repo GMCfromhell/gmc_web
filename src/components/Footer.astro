@@ -1,0 +1,27 @@
+---
+import { useTranslations, defaultLang, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  showLegalLinks?: boolean;
+}
+
+const { lang, showLegalLinks = false } = Astro.props;
+const t = useTranslations(lang);
+const prefix = lang === defaultLang ? '' : `/${lang}`;
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">{t('footer.rights')}</p>
+    {
+      showLegalLinks && (
+        <nav class="footer-links" aria-label={t('footer.legalLabel')}>
+          <a href={prefix === '' ? '/' : prefix}>{t('nav.home')}</a>
+          <a href={`${prefix}/gmcoptimizer/terms.html`}>{t('nav.terms')}</a>
+          <a href={`${prefix}/gmcoptimizer/privacy.html`}>{t('nav.privacy')}</a>
+        </nav>
+      )
+    }
+  </div>
+</footer>
