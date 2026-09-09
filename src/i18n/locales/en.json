@@ -29,13 +29,18 @@
   "gmcoptimizer": {
     "label": "Windows · Microsoft Store",
     "metaTitle": "GMC Optimizer for Windows",
-    "metaDescription": "GMC Optimizer applies Windows tweaks and checks the registry to see which ones are really active. 72 tweaks, 61 verified straight from the key. Free, on the Microsoft Store.",
-    "shortDesc": "Applies Windows tweaks and checks the registry to see which ones are really active. Every step says what happened, and you can revert.",
-    "lede": "Applies the tweak, then checks that it really took.",
-    "sub": "There are 72 Windows tweaks, and 61 of them are read straight from the key instead of being assumed to have worked. When it cannot check one, it writes \"Not checked\". It does not call it inactive, and it does not call it applied.",
+    "metaDescription": "GMC Optimizer brings together more than 100 ready-made Windows optimizations, live system readings, health analysis and diagnostic tools. Free, on the Microsoft Store.",
+    "shortDesc": "More than 100 ready-made optimizations for privacy, performance, network and gaming, with live system readings and diagnostic tools.",
+    "lede": "Optimize and monitor Windows in one place.",
+    "sub": "More than 100 ready-made optimizations for privacy, performance, network and gaming. Alongside them, live system readings, health analysis and diagnostic tools, with apply and revert on every one.",
     "cta": "Get on Microsoft Store",
     "ctaSecondary": "See what it does",
-    "badges": ["v1.10.0", "Free", "Windows 10 and 11 · 64-bit", "No data collected"],
+    "badges": [
+      "v1.10.0",
+      "Free",
+      "Windows 10 and 11 · 64-bit",
+      "No data collected"
+    ],
     "captions": {
       "home": "GMC Optimizer Home screen: live processor, memory, disk and network readings, pending tweaks and the Health Analysis summary.",
       "optimize": "Optimizations screen: six script routines and the FPS Configs, each with its own run button.",
@@ -66,11 +71,28 @@
     "heading": "The numbers that exist",
     "intro": "No speed multiplier, no FPS percentage. The app does not measure those, so it does not promise them.",
     "items": [
-      { "value": "72", "label": "Windows tweaks, across 10 categories" },
-      { "value": "61", "label": "of them verified straight from the registry" },
-      { "value": "6", "label": "script optimizations, plus 3 FPS Configs" },
-      { "value": "1", "unit": " s", "label": "between live readings" },
-      { "value": "60", "unit": " s", "label": "of graph behind every reading" }
+      {
+        "value": "100+",
+        "label": "ready-made optimizations to apply"
+      },
+      {
+        "value": "72",
+        "label": "Windows tweaks, across 10 categories"
+      },
+      {
+        "value": "61",
+        "label": "of them verified straight from the registry"
+      },
+      {
+        "value": "1",
+        "unit": " s",
+        "label": "between live readings"
+      },
+      {
+        "value": "60",
+        "unit": " s",
+        "label": "of graph behind every reading"
+      }
     ]
   },
   "features": {
@@ -89,7 +111,7 @@
     },
     "optimize": {
       "title": "Optimizations and FPS Configs",
-      "body": "Six script routines: operating system, network connection, mouse and keyboard, processor, graphics card and memory. Plus the three FPS Configs.",
+      "body": "More than 100 ready-made optimizations, counting the 72 Windows tweaks, the six script routines and the three FPS Configs. The routines cover operating system, network connection, mouse and keyboard, processor, graphics card and memory.",
       "items": [
         "FPS Configs: Win32 and IRQ priority, Max Prerendered Frames set to 1, and the Multimedia and Games profile",
         "Every step shows its own state: <b>applied, already set, failed or not run</b>",
@@ -118,7 +140,14 @@
         "Has a <b>\"what was not verified\"</b> section, with the option to retake only the readings that were missing"
       ],
       "caption": "What the scan reads",
-      "sources": ["Event log", "Application errors", "Services", "Component state", "Disks and devices", "Stability index"],
+      "sources": [
+        "Event log",
+        "Application errors",
+        "Services",
+        "Component state",
+        "Disks and devices",
+        "Stability index"
+      ],
       "score": "3.3 of 10",
       "result": "The stability index comes from Windows itself, with the scan date in plain sight. The report lists what is worth fixing and what could not be read."
     },
@@ -200,10 +229,22 @@
     "label": "Requirements",
     "heading": "What you need to run it",
     "items": [
-      { "term": "System", "value": "Windows 10 version 17763 or later" },
-      { "term": "Architecture", "value": "64-bit" },
-      { "term": "Languages", "value": "English and Portuguese" },
-      { "term": "Price", "value": "Free" }
+      {
+        "term": "System",
+        "value": "Windows 10 version 17763 or later"
+      },
+      {
+        "term": "Architecture",
+        "value": "64-bit"
+      },
+      {
+        "term": "Languages",
+        "value": "English and Portuguese"
+      },
+      {
+        "term": "Price",
+        "value": "Free"
+      }
     ],
     "note": "Distributed through the Microsoft Store as a signed package. There is no direct download: a copy taken outside the Store is not recognised as a legitimate install and will not open."
   },
@@ -244,7 +285,7 @@
             "title": "It does",
             "items": [
               "Apply and revert 72 Windows registry tweaks, grouped by category",
-              "Run six script optimization routines: operating system, network connection, mouse and keyboard, processor, graphics card and memory",
+              "Run six script optimization routines which, together with the Windows tweaks and the FPS Configs, add up to more than 100 ready-made optimizations: operating system, network connection, mouse and keyboard, processor, graphics card and memory",
               "Apply three registry settings aimed at input latency in games, called FPS Configs",
               "Show processor, memory, disk and network readings, read through native Windows APIs",
               "Run the Health Analysis, which reads the event log, services, component state and the Windows stability index",

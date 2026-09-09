@@ -29,13 +29,18 @@
   "gmcoptimizer": {
     "label": "Windows · Microsoft Store",
     "metaTitle": "GMC Optimizer para Windows",
-    "metaDescription": "O GMC Optimizer aplica ajustes do Windows e confere no registro quais estão mesmo ativos. 72 ajustes, 61 verificados direto na chave. Gratuito, na Microsoft Store.",
-    "shortDesc": "Aplica ajustes do Windows e confere no registro quais estão mesmo ativos. Cada passo diz o que aconteceu, e dá para reverter.",
-    "lede": "Aplica o ajuste e confere se ele ficou mesmo ativo.",
-    "sub": "São 72 ajustes do Windows, e 61 deles o app lê direto na chave em vez de supor que deu certo. Quando não consegue conferir, ele escreve \"Não verificado\". Não chama de inativo, não chama de aplicado.",
+    "metaDescription": "O GMC Optimizer reúne mais de 100 otimizações prontas para Windows, leituras do sistema em tempo real, análise de saúde e ferramentas de diagnóstico. Gratuito, na Microsoft Store.",
+    "shortDesc": "Mais de 100 otimizações prontas para privacidade, desempenho, rede e jogos, com leituras do sistema em tempo real e ferramentas de diagnóstico.",
+    "lede": "Otimize e monitore o Windows em um só lugar.",
+    "sub": "Mais de 100 otimizações prontas para privacidade, desempenho, rede e jogos. Junto com elas, leituras do sistema em tempo real, análise de saúde e ferramentas de diagnóstico, com aplicar e reverter em cada uma.",
     "cta": "Obter na Microsoft Store",
     "ctaSecondary": "Ver o que ele faz",
-    "badges": ["v1.10.0", "Gratuito", "Windows 10 e 11 · 64 bits", "Sem coleta de dados"],
+    "badges": [
+      "v1.10.0",
+      "Gratuito",
+      "Windows 10 e 11 · 64 bits",
+      "Sem coleta de dados"
+    ],
     "captions": {
       "home": "Tela Início do GMC Optimizer: leituras ao vivo de processador, memória, disco e rede, ajustes pendentes e o resumo da Análise de Saúde.",
       "optimize": "Tela Otimizações: seis rotinas por script e as Configs FPS, cada uma com botão de execução.",
@@ -66,11 +71,28 @@
     "heading": "Os números que existem",
     "intro": "Nenhum multiplicador de velocidade, nenhuma porcentagem de FPS. O app não mede isso, então não promete.",
     "items": [
-      { "value": "72", "label": "ajustes do Windows, em 10 categorias" },
-      { "value": "61", "label": "deles conferidos direto no registro" },
-      { "value": "6", "label": "otimizações por script, mais 3 Configs FPS" },
-      { "value": "1", "unit": " s", "label": "de intervalo entre as leituras ao vivo" },
-      { "value": "60", "unit": " s", "label": "de gráfico para cada leitura" }
+      {
+        "value": "100+",
+        "label": "otimizações prontas para aplicar"
+      },
+      {
+        "value": "72",
+        "label": "ajustes do Windows, em 10 categorias"
+      },
+      {
+        "value": "61",
+        "label": "deles conferidos direto no registro"
+      },
+      {
+        "value": "1",
+        "unit": " s",
+        "label": "de intervalo entre as leituras ao vivo"
+      },
+      {
+        "value": "60",
+        "unit": " s",
+        "label": "de gráfico para cada leitura"
+      }
     ]
   },
   "features": {
@@ -89,7 +111,7 @@
     },
     "optimize": {
       "title": "Otimizações e Configs FPS",
-      "body": "Seis rotinas por script: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória. Mais as três Configs FPS.",
+      "body": "Mais de 100 otimizações prontas, somando os 72 ajustes do Windows, as seis rotinas por script e as três Configs FPS. As rotinas cobrem sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória.",
       "items": [
         "Configs FPS: prioridade Win32 e IRQ, Max Prerendered Frames em 1, e o perfil Multimídia e Games",
         "Cada passo aparece com o seu estado: <b>aplicado, já estava assim, falhou ou não executado</b>",
@@ -118,7 +140,14 @@
         "Tem uma seção <b>\"o que não foi verificado\"</b>, com a opção de refazer só as leituras que faltaram"
       ],
       "caption": "O que a varredura lê",
-      "sources": ["Registro de eventos", "Erros de aplicativo", "Serviços", "Estado dos componentes", "Discos e dispositivos", "Índice de estabilidade"],
+      "sources": [
+        "Registro de eventos",
+        "Erros de aplicativo",
+        "Serviços",
+        "Estado dos componentes",
+        "Discos e dispositivos",
+        "Índice de estabilidade"
+      ],
       "score": "3,3 de 10",
       "result": "O índice de estabilidade vem do próprio Windows, com a data da varredura à vista. O relatório lista o que vale corrigir e o que não foi possível ler."
     },
@@ -200,10 +229,22 @@
     "label": "Requisitos",
     "heading": "O que é preciso para rodar",
     "items": [
-      { "term": "Sistema", "value": "Windows 10 versão 17763 ou superior" },
-      { "term": "Arquitetura", "value": "64 bits" },
-      { "term": "Idiomas", "value": "Português e inglês" },
-      { "term": "Preço", "value": "Gratuito" }
+      {
+        "term": "Sistema",
+        "value": "Windows 10 versão 17763 ou superior"
+      },
+      {
+        "term": "Arquitetura",
+        "value": "64 bits"
+      },
+      {
+        "term": "Idiomas",
+        "value": "Português e inglês"
+      },
+      {
+        "term": "Preço",
+        "value": "Gratuito"
+      }
     ],
     "note": "Distribuído pela Microsoft Store, em pacote assinado. Não existe download direto: uma cópia fora da Store não é reconhecida como instalação legítima e não abre."
   },
@@ -244,7 +285,7 @@
             "title": "Ele faz",
             "items": [
               "Aplica e reverte 72 ajustes de registro do Windows, organizados por categoria",
-              "Executa seis rotinas de otimização por script: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória",
+              "Executa seis rotinas de otimização por script, que somadas aos ajustes do Windows e às Configs FPS passam de 100 otimizações prontas: sistema operacional, conexão de rede, mouse e teclado, processador, placa gráfica e memória",
               "Aplica três configurações de registro voltadas a latência em jogos, chamadas Configs FPS",
               "Mostra leituras de processador, memória, disco e rede, lidas por API nativa do Windows",
               "Executa a Análise de Saúde, que lê registro de eventos, serviços, estado de componentes e o índice de estabilidade do Windows",
